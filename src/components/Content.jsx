@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Content = ({ children }) => {
-  return <div className='bg-slate-500 w-full'>{children}</div>;
+const Content = () => {
+  return <div className='w-full bg-slate-500'>CONTENT</div>;
 };
 
 export default Content;

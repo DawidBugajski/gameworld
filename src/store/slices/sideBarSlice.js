@@ -10,6 +10,7 @@ const sideBarSlice = createSlice({
       } else {
         state.width = 300;
       }
+      console.log(state.width);
     },
   },
 });
