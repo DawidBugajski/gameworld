@@ -4,11 +4,11 @@ import { useSelector } from 'react-redux';
 
 const Header = () => {
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
-  const menuOverlay = isMenuOpen ? 'h-screen' : 'h-24';
+  const menuOverlay = isMenuOpen ? 'h-screen bg-[#0a0a0a]' : 'h-24';
 
   return (
     <header
-      className={`fixed flex items-center justify-between w-full px-2 bg-[#0a0a0a] ${menuOverlay}`}
+      className={`fixed flex items-center justify-between w-full px-2 ${menuOverlay}`}
     >
       <Logo />
       <HamburgerBtn />

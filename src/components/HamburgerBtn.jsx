@@ -8,7 +8,7 @@ const HamburgerBtn = () => {
 
   return (
     <div
-      className='absolute top-0 bottom-auto left-auto bg-[#141414] right-6 h-14 w-14 cursor-pointer rounded-r-xl rotate-90 hover:bg-[#151515]'
+      className='absolute top-0 bottom-auto left-auto rotate-90 cursor-pointer bg-zinc-900 right-6 h-14 w-14 rounded-r-xl hover:bg-gray-900'
       onClick={handleClick}
     >
       <div
