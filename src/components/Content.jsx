@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Content = () => {
-  return <div className='h-full bg-slate-500'>CONTENT</div>;
+  return <div className='mt-28'>CONTENT</div>;
 };
 
 export default Content;

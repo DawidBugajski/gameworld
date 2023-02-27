@@ -1,24 +1,44 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setToggleMenu } from 'store/slices/toggleMenuSlice';
 const HamburgerBtn = () => {
+  const { isMenuOpen } = useSelector((state) => state.toggleMenu);
   const dispatch = useDispatch();
   const handleClick = () => dispatch(setToggleMenu());
 
   return (
-    <div>
-      <button onClick={handleClick} className='relative group'>
-        <div
-          className='relative flex overflow-hidden items-center
-        justify-center rounded-full w-[50px] h-[50px] transform transition-all duration-200 shadow-md '
-        >
-          <div className='flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden '>
-            <div className='bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:rotate-[42deg]  group-hover:bg-gradient-to-tr from-stone-900 to-red-600'></div>
-            <div className='bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-translate-x-10 group-hover:bg-gradient-to-tr from-stone-900 to-red-600'></div>
-            <div className='bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:-rotate-[42deg] group-hover:bg-gradient-to-tr from-stone-900 to-red-600'></div>
-          </div>
-        </div>
-      </button>
+    <div
+      className='absolute top-0 bottom-auto left-auto bg-[#141414] right-6 h-14 w-14 cursor-pointer rounded-r-xl rotate-90 hover:bg-[#151515]'
+      onClick={handleClick}
+    >
+      <div
+        className={`bg-[#dc1414] h-0.5 left-1/2 top-1/2  absolute transition-all duration-75 rotate-45   ${
+          isMenuOpen
+            ? '-translate-x-[9px] translate-y-[7px] w-5'
+            : '-translate-y-2 w-6'
+        }`}
+      ></div>
+      <div
+        className={`bg-[#dc1414] h-0.5 left-1/2 top-1/2  absolute transition-all duration-75 -rotate-45   ${
+          isMenuOpen
+            ? '-translate-x-[9px] -translate-y-[7px] w-5'
+            : 'translate-y-2 w-6 '
+        }`}
+      ></div>
+      <div
+        className={`bg-[#dc1414] h-0.5 left-1/2 top-1/2 w-[15px] absolute transition-all duration-75  rotate-45  ${
+          isMenuOpen
+            ? 'translate-x-[5px] translate-y-[5px] '
+            : '-translate-x-[7px] -translate-y-[5px] '
+        }`}
+      ></div>
+      <div
+        className={`bg-[#dc1414] h-0.5 left-1/2 top-1/2 w-[15px] absolute transition-all duration-75 -rotate-45   ${
+          isMenuOpen
+            ? 'translate-x-[5px] -translate-y-[5px]'
+            : '-translate-x-[7px] translate-y-[5px] '
+        }`}
+      ></div>
     </div>
   );
 };

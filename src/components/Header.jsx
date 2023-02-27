@@ -1,28 +1,23 @@
 import React from 'react';
-import { HamburgerBtn } from 'components';
+import { HamburgerBtn, Logo } from 'components';
 import { useSelector } from 'react-redux';
 
 const Header = () => {
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
+  const menuOverlay = isMenuOpen ? 'h-screen' : 'h-24';
+
   return (
-    <div className={`${isMenuOpen ? 'bg-pink-600' : 'bg-purple-700'}`}>
-      <div className='sticky flex items-center justify-between h-24 px-2'>
-        <p className='text-xl text-transparent bg-gradient-to-tr from-stone-900 to-red-600 bg-clip-text'>
-          GAME W_RLD
-        </p>
-        <HamburgerBtn />
-      </div>
-    </div>
+    <header
+      className={`fixed flex items-center justify-between w-full px-2 bg-[#0a0a0a] ${menuOverlay}`}
+    >
+      <Logo />
+      <HamburgerBtn />
+    </header>
   );
 };
 
 export default Header;
 
 /**
- * TODO
- * Mobile:
- * Header sticky
- * logo button => when clicked, the entire application is to be covered by a menu overlay:
- * search input
- * icons and positions to route (filtertype games?)
+ * jeśli jest overlay włączony to muszę mieć komponent z klasą h-screen na pewno, ale inne mają zostać, ale w tym komponencie będę też wyswietlać inne elementy, czyli w zależności od tego czy isMenuOpen jest prawdą czy fałszem, to muszę wyświetlać albo jedno albo drugie, czyli albo jeden komponent albo drugi.
  */
