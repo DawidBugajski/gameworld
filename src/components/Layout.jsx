@@ -3,7 +3,7 @@ import { Footer, Content, Header } from 'components';
 
 const Layout = () => {
   return (
-    <div className='flex flex-col h-screen text-white bg-neutral-800'>
+    <div className='flex flex-col text-white'>
       <Header />
       <Content />
       <Footer />

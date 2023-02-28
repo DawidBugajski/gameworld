@@ -1,17 +1,18 @@
 import React from 'react';
-import { HamburgerBtn, Logo } from 'components';
+import { HamburgerBtn, Logo, MenuExpanded } from 'components';
 import { useSelector } from 'react-redux';
 
 const Header = () => {
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
-  const menuOverlay = isMenuOpen ? 'h-screen bg-[#0a0a0a]' : 'h-24';
+  const menuOverlay = isMenuOpen ? 'h-screen bg-[#0a0a0a] z-20' : 'h-20';
 
   return (
     <header
-      className={`fixed flex items-center justify-between w-full px-2 ${menuOverlay}`}
+      className={`flex flex-col justify-center fixed w-full px-2 ${menuOverlay} transition-all duration-300 z-10`}
     >
       <Logo />
       <HamburgerBtn />
+      {isMenuOpen && <MenuExpanded />}
     </header>
   );
 };
@@ -19,5 +20,7 @@ const Header = () => {
 export default Header;
 
 /**
- * jeśli jest overlay włączony to muszę mieć komponent z klasą h-screen na pewno, ale inne mają zostać, ale w tym komponencie będę też wyswietlać inne elementy, czyli w zależności od tego czy isMenuOpen jest prawdą czy fałszem, to muszę wyświetlać albo jedno albo drugie, czyli albo jeden komponent albo drugi.
+ * zrobić navbar który będzie zawierał filtry jako kategorie gier: ACTION/STRATEGY/RPG/SHOOTER/ADVENTURE/PUZZLE/RACING/SPORTS
+ *
+ *
  */

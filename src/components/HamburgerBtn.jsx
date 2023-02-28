@@ -8,32 +8,32 @@ const HamburgerBtn = () => {
 
   return (
     <div
-      className='absolute top-0 bottom-auto left-auto rotate-90 cursor-pointer bg-zinc-900 right-6 h-14 w-14 rounded-r-xl hover:bg-gray-900'
+      className='absolute top-0 bottom-auto left-auto rotate-90 cursor-pointer bg-zinc-900 right-6 h-14 w-14 rounded-r-xl hover:bg-neutral-800'
       onClick={handleClick}
     >
       <div
-        className={`bg-[#dc1414] h-0.5 left-1/2 top-1/2  absolute transition-all duration-75 rotate-45   ${
+        className={`bg-main-red h-0.5 left-1/2 top-1/2  absolute transition-all duration-75 rotate-45   ${
           isMenuOpen
             ? '-translate-x-[9px] translate-y-[7px] w-5'
             : '-translate-y-2 w-6'
         }`}
       ></div>
       <div
-        className={`bg-[#dc1414] h-0.5 left-1/2 top-1/2  absolute transition-all duration-75 -rotate-45   ${
+        className={`bg-main-red h-0.5 left-1/2 top-1/2  absolute transition-all duration-75 -rotate-45   ${
           isMenuOpen
             ? '-translate-x-[9px] -translate-y-[7px] w-5'
             : 'translate-y-2 w-6 '
         }`}
       ></div>
       <div
-        className={`bg-[#dc1414] h-0.5 left-1/2 top-1/2 w-[15px] absolute transition-all duration-75  rotate-45  ${
+        className={`bg-main-red h-0.5 left-1/2 top-1/2 w-[15px] absolute transition-all duration-75  rotate-45  ${
           isMenuOpen
             ? 'translate-x-[5px] translate-y-[5px] '
             : '-translate-x-[7px] -translate-y-[5px] '
         }`}
       ></div>
       <div
-        className={`bg-[#dc1414] h-0.5 left-1/2 top-1/2 w-[15px] absolute transition-all duration-75 -rotate-45   ${
+        className={`bg-main-red h-0.5 left-1/2 top-1/2 w-[15px] absolute transition-all duration-75 -rotate-45   ${
           isMenuOpen
             ? 'translate-x-[5px] -translate-y-[5px]'
             : '-translate-x-[7px] translate-y-[5px] '

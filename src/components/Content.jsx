@@ -1,7 +1,13 @@
 import React from 'react';
+import { Hero, GamesContainer } from 'components';
 
 const Content = () => {
-  return <div className='mt-28'>CONTENT</div>;
+  return (
+    <>
+      <Hero />
+      <GamesContainer />
+    </>
+  );
 };
 
 export default Content;

@@ -4,10 +4,13 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        hero: "url('/public/images/background.jpg')",
+        hero: "url('/src/assets/images/background.jpg')",
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
+      },
+      colors: {
+        'main-red': '#dc1414',
       },
     },
   },

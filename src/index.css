@@ -6,3 +6,14 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.layout {
+  box-shadow: rgb(15 16 17) 100px 0px 50px -30px inset;
+}
+
+.hero::before {
+  background: linear-gradient(0deg, #141414, hsla(0, 0%, 8%, 0.5));
+  content: '';
+  inset: 0;
+  position: absolute;
+}
