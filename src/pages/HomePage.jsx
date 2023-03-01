@@ -1,7 +1,7 @@
 import React from 'react';
 import { Hero, GamesContainer } from 'components';
 
-const Content = () => {
+const HomePage = () => {
   return (
     <>
       <Hero />
@@ -10,4 +10,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default HomePage;

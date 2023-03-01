@@ -4,7 +4,9 @@ import { useSelector } from 'react-redux';
 
 const Header = () => {
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
-  const menuOverlay = isMenuOpen ? 'h-screen bg-[#0a0a0a] z-20' : 'h-20';
+  const menuOverlay = isMenuOpen
+    ? 'h-screen bg-[#0a0a0a] z-20 lg:w-[300px] '
+    : 'h-20 lg:w-[100px] lg:bg-[#0a0a0a] lg:h-screen';
 
   return (
     <header

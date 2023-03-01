@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        hero: "url('/src/assets/images/background.jpg')",
+        hero: "url('/src/assets/images/home-background.jpg')",
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],

@@ -1,4 +1,4 @@
-export { default as Content } from 'components/Content';
+export { default as ContentRoutes } from 'components/ContentRoutes';
 export { default as Footer } from 'components/Footer';
 export { default as Layout } from 'components/Layout';
 export { default as Header } from 'components/Header';
