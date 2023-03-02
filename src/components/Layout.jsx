@@ -1,13 +1,21 @@
 import React from 'react';
 import { Footer, ContentRoutes, Header } from 'components';
+import { useSelector } from 'react-redux';
 
 const Layout = () => {
+  const { isMenuOpen } = useSelector((state) => state.toggleMenu);
+  const insetLayout = isMenuOpen ? 'lg:ml-[300px]' : 'lg:ml-[150px]';
+
   return (
-    <div className='flex flex-col text-white'>
+    <>
       <Header />
-      <ContentRoutes />
-      <Footer />
-    </div>
+      <div
+        className={`flex flex-col text-white ${insetLayout} transition-all duration-300`}
+      >
+        <ContentRoutes />
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ const GamesContainer = () => {
     queryKey: ['gamesHomePage'],
     queryFn: async () => {
       const promises = [];
-      for (let i = 1; i <= 15; i++) {
+      for (let i = 1; i <= 5; i++) {
         promises.push(
           axios.get(`${BASE_URL}?key=${API_KEY}&ordering=-ordering&page=${i}`)
         );
@@ -24,14 +24,14 @@ const GamesContainer = () => {
   console.log(data);
 
   const top300Games = (
-    <div className='flex flex-wrap h-full bg-black'>
+    <div className='flex flex-wrap h-full  bg-[#181A1B] cursor-grab '>
       {data.map((game) => (
         <div
           key={game.id}
-          className='flex-grow w-48 bg-center bg-cover h-72'
+          className='flex-grow w-20 h-40 m-2 transition-all duration-300 scale-90 bg-center bg-cover rounded-2xl hover:scale-110 hover:brightness-50 lg:w-48 lg:h-72'
           style={{ backgroundImage: `url(${game.background_image})` }}
         >
-          <h2 className='text-xl text-white'>{game.name}</h2>
+          <h2 className='text-xl text-white opacity-0'>{game.name}</h2>
         </div>
       ))}
     </div>
@@ -42,4 +42,5 @@ const GamesContainer = () => {
 
 export default GamesContainer;
 
+// w-48 h-72
 // czy powinienem to jakoś podzielić, wyjąc przed return całą logikę, brigtness na hover, tekst opacity 0 na począktu
