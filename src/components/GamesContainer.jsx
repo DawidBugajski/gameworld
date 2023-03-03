@@ -8,7 +8,7 @@ const GamesContainer = () => {
     queryKey: ['gamesHomePage'],
     queryFn: async () => {
       const promises = [];
-      for (let i = 1; i <= 5; i++) {
+      for (let i = 1; i <= 2; i++) {
         promises.push(
           axios.get(`${BASE_URL}?key=${API_KEY}&ordering=-ordering&page=${i}`)
         );

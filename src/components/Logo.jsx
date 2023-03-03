@@ -1,17 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Logo = () => {
   return (
-    <div className='text-2xl text-[#ED3636] top-5 left-5 absolute lg:text-lg lg:static'>
-      Game
-      <span className='text-lg font-bold text-white lg:text-lg'>
-        W
-        <span className=' text-[#ED3636] text-2xl rounded-full lg:text-lg'>
-          ▽
+    <Link to='/'>
+      <div className='absolute text-2xl cursor-pointer text-main-red top-5 left-5 lg:text-lg lg:static'>
+        Game
+        <span className='text-lg font-bold text-white lg:text-lg'>
+          W
+          <span className='text-2xl rounded-full text-main-red lg:text-lg'>
+            ▽
+          </span>
+          RLD
         </span>
-        RLD
-      </span>
-    </div>
+      </div>
+    </Link>
   );
 };
 

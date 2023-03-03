@@ -11,6 +11,7 @@ module.exports = {
       },
       colors: {
         'main-red': '#dc1414',
+        'main-dark-red': '#781010',
       },
     },
   },

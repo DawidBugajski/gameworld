@@ -1,13 +1,8 @@
 import React from 'react';
-import { SearchBar, NavBar } from 'components';
+import { SearchBar } from 'components';
 
 const MenuExpanded = () => {
-  return (
-    <>
-      <SearchBar />
-      <NavBar />
-    </>
-  );
+  return <SearchBar />;
 };
 
 export default MenuExpanded;

@@ -1,7 +1,12 @@
 import React from 'react';
+import { WishlistIcon } from 'components';
 
 const NavBar = () => {
-  return <div className='text-white'>NavBar</div>;
+  return (
+    <>
+      <WishlistIcon />
+    </>
+  );
 };
 
 export default NavBar;

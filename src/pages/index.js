@@ -1,2 +1,2 @@
-export { default as Page } from 'pages/Page';
+export { default as Wishlist } from 'pages/Wishlist';
 export { default as HomePage } from 'pages/HomePage';
