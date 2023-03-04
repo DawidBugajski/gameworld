@@ -6,7 +6,7 @@ const SideBar = () => {
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
   const menuOverlay = isMenuOpen
     ? 'h-screen bg-[#0a0a0a] z-20 lg:w-[300px] '
-    : 'h-20 lg:w-[150px] lg:bg-[#0a0a0a] lg:h-screen';
+    : 'h-20 lg:w-[100px] lg:bg-[#0a0a0a] lg:h-screen';
 
   return (
     <header

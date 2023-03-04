@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const Layout = () => {
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
-  const insetLayout = isMenuOpen ? 'lg:ml-[300px]' : 'lg:ml-[150px]';
+  const insetLayout = isMenuOpen ? 'lg:ml-[300px]' : 'lg:ml-[100px]';
 
   return (
     <>

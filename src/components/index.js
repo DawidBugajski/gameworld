@@ -5,7 +5,6 @@ export { default as SideBar } from 'components/SideBar';
 export { default as HamburgerBtn } from 'components/HamburgerBtn';
 export { default as Logo } from 'components/Logo';
 export { default as SearchBar } from 'components/SearchBar';
-
 export { default as WishlistIcon } from 'components/WishlistIcon';
 export { default as Hero } from 'components/Hero';
 export { default as GamesContainer } from 'components/GamesContainer';
