@@ -1,5 +1,5 @@
 import React from 'react';
-import { HamburgerBtn, Logo, MenuExpanded, NavBar } from 'components';
+import { Header } from 'components';
 import { useSelector } from 'react-redux';
 
 const SideBar = () => {
@@ -12,19 +12,9 @@ const SideBar = () => {
     <header
       className={`justify-center flex flex-col fixed w-full ${menuOverlay} transition-all duration-300 z-10 p-4 lg:text-center lg:justify-start lg:gap-9 `}
     >
-      <Logo />
-      <HamburgerBtn />
-      {isMenuOpen && <MenuExpanded />}
-      <NavBar />
+      <Header />
     </header>
   );
 };
 
 export default SideBar;
-
-/**
- * ukryć serduszko na mobile jeśli menu nie jest rozwinięte
- * zrobić navbar który będzie zawierał filtry jako kategorie gier: ACTION/STRATEGY/RPG/SHOOTER/ADVENTURE/PUZZLE/RACING/SPORTS
- *
- *
- */
