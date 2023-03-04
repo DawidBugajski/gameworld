@@ -3,4 +3,5 @@ Dokończ Header
 - wrzucenie ikonki z serduszkiem która będzie wishlistą, gdzie docelowo będą się pokazywały gry które byśmy chcieli sobie kupić (musi być w localstorage)
 - tu muszę wrzucić te ikony które będą przenosić do określonego routingu
 - zaimplementować searchBar oraz zamysł jak to działać ma
+
 - aktualny header powinien się nazywać sideBar a header to musi być komponent który będzie łapał logo search bar i ikonkę w kontenerze

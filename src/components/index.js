@@ -1,7 +1,7 @@
 export { default as ContentRoutes } from 'components/ContentRoutes';
 export { default as Footer } from 'components/Footer';
 export { default as Layout } from 'components/Layout';
-export { default as Header } from 'components/Header';
+export { default as SideBar } from 'components/SideBar';
 export { default as HamburgerBtn } from 'components/HamburgerBtn';
 export { default as Logo } from 'components/Logo';
 export { default as SearchBar } from 'components/SearchBar';

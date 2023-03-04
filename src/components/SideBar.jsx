@@ -2,7 +2,7 @@ import React from 'react';
 import { HamburgerBtn, Logo, MenuExpanded, NavBar } from 'components';
 import { useSelector } from 'react-redux';
 
-const Header = () => {
+const SideBar = () => {
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
   const menuOverlay = isMenuOpen
     ? 'h-screen bg-[#0a0a0a] z-20 lg:w-[300px] '
@@ -20,7 +20,7 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default SideBar;
 
 /**
  * ukryć serduszko na mobile jeśli menu nie jest rozwinięte
