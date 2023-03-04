@@ -4,7 +4,9 @@ const OpacityNavItem = ({ children }) => {
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
   const opacity = isMenuOpen ? 'opacity-1' : 'opacity-0';
   return (
-    <div className={`transition-all duration-500 ${opacity}`}>{children}</div>
+    <div className={`-z-10 transition-all duration-500 ${opacity}`}>
+      {children}
+    </div>
   );
 };
 
