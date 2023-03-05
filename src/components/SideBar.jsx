@@ -10,7 +10,7 @@ const SideBar = () => {
 
   return (
     <header
-      className={`justify-center flex flex-col fixed w-full ${menuOverlay} transition-all duration-300 z-10 p-4 lg:text-center lg:justify-start lg:gap-9 `}
+      className={`justify-start flex flex-col fixed w-full ${menuOverlay} transition-all duration-300 z-10 p-[25px] lg:text-center lg:gap-10`}
     >
       <Header />
     </header>
