@@ -13,5 +13,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// <div className='flex flex-col gap-10'>

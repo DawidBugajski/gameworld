@@ -1,16 +1,17 @@
 import React from 'react';
-import { OpacityNavItem } from 'utils/helpers';
+
+import { useSelector } from 'react-redux';
 
 const SearchBar = () => {
+  const { isMenuOpen } = useSelector((state) => state.toggleMenu);
+  const opacity = isMenuOpen ? 'opacity-1' : 'opacity-0';
   return (
-    <OpacityNavItem>
-      <input
-        className='border-[2px] border-transparent w-full pl-6 py-1.5 mx-auto bg-[#141414] rounded-full outline-none text-white focus-visible:border-white lg:gap-9 '
-        type='text'
-        placeholder='Search...'
-        onChange={() => {}}
-      />
-    </OpacityNavItem>
+    <input
+      className={`border-[2px] border-transparent w-full pl-6 py-1.5 mx-auto bg-[#141414] rounded-full outline-none text-white focus-visible:border-white lg:gap-9 -z-10 transition-all duration-300 ${opacity}`}
+      type='text'
+      placeholder='Search...'
+      onChange={() => {}}
+    />
   );
 };
 
