@@ -6,7 +6,7 @@ const ContentRoutes = () => {
   return (
     <Routes>
       <Route path='/' element={<HomePage />} />
-      <Route path='/wishlist/' element={<Wishlist />} />
+      <Route path='/wishlist' element={<Wishlist />} />
     </Routes>
   );
 };
