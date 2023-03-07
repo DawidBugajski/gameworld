@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { HomePage, Wishlist } from 'pages';
+import HomePage from 'pages/HomePage';
+import Wishlist from 'pages/Wishlist';
 
 const ContentRoutes = () => {
   return (

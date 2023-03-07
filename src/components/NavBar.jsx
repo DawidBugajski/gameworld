@@ -1,5 +1,5 @@
 import React from 'react';
-import { WishlistIcon } from 'components';
+import WishlistIcon from 'components/WishlistIcon';
 
 const NavBar = () => {
   return (

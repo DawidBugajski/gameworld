@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from 'components';
+import Header from 'components/Header';
 import { useSelector } from 'react-redux';
 
 const SideBar = () => {

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Footer, ContentRoutes, SideBar } from 'components';
+import Footer from 'components/Footer';
+import ContentRoutes from 'components/ContentRoutes';
+import Sidebar from 'components/Sidebar';
 import { useSelector } from 'react-redux';
 
 const Layout = () => {
@@ -8,7 +10,7 @@ const Layout = () => {
 
   return (
     <>
-      <SideBar />
+      <Sidebar />
       <div
         className={`flex flex-col text-white ${insetLayout} transition-all duration-300`}
       >

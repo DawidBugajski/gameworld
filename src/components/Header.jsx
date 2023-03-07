@@ -1,19 +1,17 @@
 import React from 'react';
-import {
-  HamburgerBtn,
-  Logo,
-  SearchBar,
-  NavBar,
-  SearchResults,
-} from 'components';
+import HamburgerButton from 'components/HamburgerButton';
+import Logo from 'components/Logo';
+import Searchbar from 'components/Searchbar';
+import Navbar from 'components/Navbar';
+import SearchResults from 'components/SearchResults';
 
 const Header = () => {
   return (
     <>
       <Logo />
-      <HamburgerBtn />
-      <SearchBar />
-      <NavBar />
+      <HamburgerButton />
+      <Searchbar />
+      <Navbar />
       <SearchResults />
     </>
   );
