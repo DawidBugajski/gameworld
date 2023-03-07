@@ -8,11 +8,7 @@ const SearchResults = () => {
     showResults && isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
   }`;
 
-  return (
-    <div onClick={() => console.log(value)} className={containerClass}>
-      SearchResults
-    </div>
-  );
+  return <div className={containerClass}>SearchResults</div>;
 };
 
 export default SearchResults;
