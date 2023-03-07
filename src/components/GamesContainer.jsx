@@ -6,6 +6,8 @@ import { API_KEY, BASE_URL } from 'utils/constans';
 const GamesContainer = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['gamesHomePage'],
+
+    // APi returns only 20 games, if I want, for example, the top 100 I have to loop it.
     queryFn: async () => {
       const promises = [];
       for (let i = 1; i <= 2; i++) {

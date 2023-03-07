@@ -1,6 +1,1 @@
-TODO:
-1 - Make carousel on homepage games
-2 - SearchBar :
- * na enter powinno coś się dziać
- * pokaż ikonkę jeśli coś jest wpisane i po kliknięciu w niej ma zniknąć i wyczyścić value
- Czy nie ma błędu w setSearchValue w slice? musimy ustawić flage na false jeśli jest pusty string
+1 - wg konsoli fetchuje po każdym kliknięciu gry, a powinienem to zrobić tylko raz 

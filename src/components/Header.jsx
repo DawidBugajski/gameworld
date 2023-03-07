@@ -1,5 +1,11 @@
 import React from 'react';
-import { HamburgerBtn, Logo, SearchBar, NavBar } from 'components';
+import {
+  HamburgerBtn,
+  Logo,
+  SearchBar,
+  NavBar,
+  SearchResults,
+} from 'components';
 
 const Header = () => {
   return (
@@ -8,6 +14,7 @@ const Header = () => {
       <HamburgerBtn />
       <SearchBar />
       <NavBar />
+      <SearchResults />
     </>
   );
 };

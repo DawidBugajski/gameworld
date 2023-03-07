@@ -11,3 +11,4 @@ export { default as GamesContainer } from 'components/GamesContainer';
 export { default as Button } from 'components/Button';
 export { default as NavBar } from 'components/NavBar';
 export { default as Header } from 'components/Header';
+export { default as SearchResults } from 'components/SearchResults';

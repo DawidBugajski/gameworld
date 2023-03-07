@@ -33,5 +33,3 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
-
-// jeśli coś jest wpisane to pokaż ikonkę obok
