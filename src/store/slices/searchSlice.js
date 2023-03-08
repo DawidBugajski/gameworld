@@ -31,5 +31,3 @@ const searchSlice = createSlice({
 export const { setSearchValue, setClearValue, setHideResults } =
   searchSlice.actions;
 export default searchSlice.reducer;
-
-// I added another showResults flag to the initial state, which will be responsible for showing a component with games that match the search. By default, it wants the component to show a list of matching games when the enters are pressed

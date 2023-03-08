@@ -1,1 +1,2 @@
-1 - wg konsoli fetchuje po każdym kliknięciu gry, a powinienem to zrobić tylko raz 
+Implement searchResults component [🔺]
+

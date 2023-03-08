@@ -1,5 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import axios from 'axios';
+import { API_KEY, BASE_URL } from 'utils/constans';
+import { useQuery } from '@tanstack/react-query';
 
 const SearchResults = () => {
   const { showResults, value } = useSelector((state) => state.search);
