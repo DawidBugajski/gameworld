@@ -33,6 +33,7 @@ const SearchResults = () => {
           key={game.id}
         >
           <Link
+            to={`/games/${game.id}`}
             onClick={() => console.log(game)}
             className='pl-2 text-sm text-white'
           >
@@ -45,8 +46,3 @@ const SearchResults = () => {
 };
 
 export default SearchResults;
-
-// loading się pokazuje cały czas, a to enabled chyba miało je wyłączać
-// strasznie chujowe te gry fetchuje // &ordering=-rating
-// problem na xs
-// jakiś dopisek że jeśli nie wyszukuje gry to upewnij się że podana nazwa jest prawidłowa, ewentualnie wpisz pełną nazwę tytułu
