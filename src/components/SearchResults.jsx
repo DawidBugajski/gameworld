@@ -28,18 +28,14 @@ const SearchResults = () => {
   return (
     <nav className={containerClass}>
       {data.results.map((game) => (
-        <li
-          className=' hover:bg-opacity-50 transition-all duration-150 cursor-pointer p-[5px] my-2 lg:p-3 rounded-lg bg-neutral-900'
-          key={game.id}
-        >
-          <Link
-            to={`/games/${game.id}`}
-            onClick={() => console.log(game)}
-            className='pl-2 text-sm text-white'
+        <Link to={`/games/${game.id}`} onClick={() => console.log(game)}>
+          <li
+            className=' hover:bg-opacity-50 transition-all duration-150 cursor-pointer p-[5px] my-2 lg:p-3 rounded-lg bg-neutral-900'
+            key={game.id}
           >
-            {game.name}
-          </Link>
-        </li>
+            <p className='pl-2 text-sm text-white'>{game.name}</p>
+          </li>
+        </Link>
       ))}
     </nav>
   );
