@@ -2,7 +2,7 @@ import React from 'react';
 import Header from 'components/Header';
 import { useSelector } from 'react-redux';
 
-const SideBar = () => {
+const Sidebar = () => {
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
   const menuOverlay = isMenuOpen
     ? 'h-screen bg-[#0a0a0a] z-20 lg:w-[300px] '
@@ -17,4 +17,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default Sidebar;

@@ -16,7 +16,7 @@ const SearchBar = () => {
     : 'opacity-0 pointer-events-none';
 
   return (
-    <div className='relative mt-10 lg:mt-0'>
+    <div className='relative mt-4 lg:mt-0'>
       <AiFillCloseCircle
         onClick={handleResetSearchValue}
         className={`absolute top-[62%] w-7 h-7 lg:w-5 lg:h-5 transition-all duration-150 -translate-y-1/2 cursor-pointer right-4 lg:inset-y-1/2 stroke-white fill-main-dark-red hover:fill-main-red ${showResetIcon} ${opacity}`}

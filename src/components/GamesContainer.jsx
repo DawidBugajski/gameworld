@@ -16,17 +16,16 @@ const GamesContainer = () => {
         );
       }
       const responses = await Promise.all(promises);
-      const games = responses.map((response) => response.data.results);
+      const games = responses.map((res) => res.data.results);
       return games.flat();
     },
   });
 
   if (isLoading) return 'Loading...';
   if (error) return `Error ${error.message}`;
-  console.log(data);
 
   const top300Games = (
-    <div className='flex flex-wrap h-full  bg-[#181A1B] cursor-grab '>
+    <div className='flex flex-wrap h-full  bg-[#181A1B] cursor-grab'>
       {data.map((game) => (
         <div
           key={game.id}
@@ -36,6 +35,7 @@ const GamesContainer = () => {
           <h2 className='text-xl text-white opacity-0'>{game.name}</h2>
         </div>
       ))}
+      npm st
     </div>
   );
 
@@ -43,6 +43,3 @@ const GamesContainer = () => {
 };
 
 export default GamesContainer;
-
-// w-48 h-72
-// czy powinienem to jakoś podzielić, wyjąc przed return całą logikę, brigtness na hover, tekst opacity 0 na począktu
