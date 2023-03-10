@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { API_KEY, BASE_URL } from 'utils/constans';
+import Carousel from './Carousel';
 
 const GamesContainer = () => {
   const { isLoading, error, data } = useQuery({
@@ -37,7 +38,11 @@ const GamesContainer = () => {
     </div>
   );
 
-  return top100Games;
+  return (
+    <div className='bg-black'>
+      <Carousel />
+    </div>
+  );
 };
 
 export default GamesContainer;
