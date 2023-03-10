@@ -1,2 +1,4 @@
-Implement searchResults component [🔺]
+1 - Implement searchResults component [✅]
+2 - Make carousel with top games
+
 

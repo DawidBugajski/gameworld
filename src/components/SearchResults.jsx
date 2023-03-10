@@ -28,7 +28,11 @@ const SearchResults = () => {
   return (
     <nav className={containerClass}>
       {data.results.map((game) => (
-        <Link to={`/games/${game.id}`} onClick={() => console.log(game)}>
+        <Link
+          key={game.id}
+          to={`/games/${game.id}`}
+          onClick={() => console.log(game)}
+        >
           <li
             className=' hover:bg-opacity-50 transition-all duration-150 cursor-pointer p-[5px] my-2 lg:p-3 rounded-lg bg-neutral-900'
             key={game.id}
