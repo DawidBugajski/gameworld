@@ -16,9 +16,7 @@ const GamesContainer = () => {
           axios.get(`${BASE_URL}?key=${API_KEY}&ordering=-ordering&page=${i}`)
         );
       }
-      // const responses = await Promise.all(promises);
-      // const games = responses.map((res) => res.data.results);
-      // return games.flat();
+
       const responses = await Promise.all(promises);
       const games = responses.reduce(
         (acc, curr) => acc.concat(curr.data.results),
@@ -38,6 +36,10 @@ const GamesContainer = () => {
 };
 
 export default GamesContainer;
+
+// const responses = await Promise.all(promises);
+// const games = responses.map((res) => res.data.results);
+// return games.flat();
 
 // const top100Games = (
 //   <div className='flex flex-wrap h-full  bg-[#181A1B] cursor-grab'>

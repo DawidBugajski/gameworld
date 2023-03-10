@@ -34,7 +34,16 @@ const Carousel = ({ data }) => {
   console.log(data);
 
   return (
-    <div className='overflow-hidden'>{<Slider {...settings}></Slider>}</div>
+    <div className='overflow-hidden'>
+      <Slider {...settings}>
+        {data.map((game) => (
+          <div key={game.id}>
+            <h2>{game.name}</h2>
+            <img src={game.background_image} alt={game.name} />
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
