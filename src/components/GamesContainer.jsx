@@ -28,8 +28,9 @@ const GamesContainer = () => {
   if (isLoading) return 'Loading...';
   if (error) return `Error ${error.message}`;
   console.log(data);
+
   return (
-    <div className='bg-black'>
+    <div className='bg-[#181A1B]'>
       <Carousel data={data} />
     </div>
   );
