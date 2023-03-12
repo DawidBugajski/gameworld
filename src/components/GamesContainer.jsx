@@ -30,7 +30,14 @@ const GamesContainer = () => {
   console.log(data);
 
   return (
-    <div className='bg-[#181A1B]'>
+    <div className='bg-[#181A1B] relative'>
+      <h2 className='absolute ml-6 text-2xl italic font-semibold -top-12'>
+        Top 100 games of{' '}
+        <span class='before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-white relative inline-block mx-2'>
+          <span class='relative text-main-red'>all</span>
+        </span>{' '}
+        time
+      </h2>
       <Carousel data={data} />
     </div>
   );
@@ -38,20 +45,4 @@ const GamesContainer = () => {
 
 export default GamesContainer;
 
-// const responses = await Promise.all(promises);
-// const games = responses.map((res) => res.data.results);
-// return games.flat();
-
-// const top100Games = (
-//   <div className='flex flex-wrap h-full  bg-[#181A1B] cursor-grab'>
-//     {data.map((game) => (
-//       <div
-//         key={game.id}
-//         className='flex-grow w-20 h-40 m-2 transition-all duration-300 scale-90 bg-center bg-cover rounded-2xl hover:scale-100 hover:brightness-50 lg:w-48 lg:h-72'
-//         style={{ backgroundImage: `url(${game.background_image})` }}
-//       >
-//         <h2 className='text-xl opacity-0'>{game.name}</h2>
-//       </div>
-//     ))}
-//   </div>
-// );
+// should i rename this component?
