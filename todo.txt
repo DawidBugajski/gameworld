@@ -1,5 +1,10 @@
-1 - Implement searchResults component [✅]
-2 - Make carousel with top games [✅]
- - style 
+https://api.rawg.io/api/games?dates=2023-03-12,2023-12-31&ordering=-rating&key=9ed8d5b158a14bba9743c10d1f7ef132 - pokazuje gry które dopiero będą miały premiere, tylko jak ustawić 1 date dynamicznie
 
 
+  //TODO - Move this to relevant component (premiere games)
+
+  const PREMIERE_GAMES_URL = `${BASE_URL}?dates=${getNextDay()},2024-12-31&ordering=-rating&key=${API_KEY}`;
+  console.log(PREMIERE_GAMES_URL);
+
+  import { getNextDay } from 'utils/helpers/getNextDay';
+import { API_KEY, BASE_URL } from 'utils/constans';

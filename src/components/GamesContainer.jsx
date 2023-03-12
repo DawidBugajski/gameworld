@@ -27,14 +27,13 @@ const GamesContainer = () => {
   });
   if (isLoading) return 'Loading...';
   if (error) return `Error ${error.message}`;
-  console.log(data);
 
   return (
     <div className='bg-[#181A1B] relative'>
       <h2 className='absolute ml-6 text-2xl italic font-semibold -top-12'>
         Top 100 games of{' '}
-        <span class='before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-white relative inline-block mx-2'>
-          <span class='relative text-main-red'>all</span>
+        <span className='relative inline-block mx-2 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-white'>
+          <span className='relative text-main-red'>all</span>
         </span>{' '}
         time
       </h2>
