@@ -20,14 +20,13 @@ body {
 }
 
 /* CAROUSEL HOMEPAGE */
-
 .carousel__card {
   width: 95% !important;
   height: 280px;
   cursor: grab;
   position: relative;
-  /* overflow: hidden; */
 }
+
 .carousel__card:hover img {
   filter: brightness(50%);
   transform: scale(0.95);

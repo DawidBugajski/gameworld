@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom';
 const Carousel = ({ data }) => {
   const settings = {
     infinite: true,
-    speed: 2000,
+    speed: 1500,
     autoplay: true,
     slidesToShow: 8,
     slidesToScroll: 8,
     autoplaySpeed: 5000,
     initialSlide: 0,
-    arrow: false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1536,
