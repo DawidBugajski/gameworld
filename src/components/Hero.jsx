@@ -4,20 +4,29 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className='min-h-[700px] bg-center layout bg-hero hero bg-cover relative flex justify-center items-center py-12'>
-      <div className='z-10 flex flex-col items-end w-10/12 gap-6 text-right'>
-        <h2 className='text-3xl italic font-bold tracking-widest'>
-          The Witcher 3: Wild Hunt
-        </h2>
-        <p className='text-sm'>
-          Your name is Geralt of Rivia and you are a witcher in a world
-          devastated by war and full of bloodthirsty beasts.
-        </p>
-        <Link to={'/games/3328'}>
-          <Button>See more</Button>
-        </Link>
+    <div>
+      <div className='min-h-[700px] bg-center layout bg-hero hero bg-cover relative flex justify-center items-center py-12'>
+        <div className='z-10 flex flex-col items-end w-10/12 gap-6 text-right'>
+          <h2 className='text-3xl italic font-bold tracking-widest'>
+            The Witcher 3: Wild Hunt
+          </h2>
+          <p className='text-sm'>
+            Your name is Geralt of Rivia and you are a witcher in a world
+            devastated by war and full of bloodthirsty beasts.
+          </p>
+          <Link to={'/games/3328'}>
+            <Button>See more</Button>
+          </Link>
+        </div>
       </div>
-    </section>
+      <h2 className='absolute pl-6 text-xl italic font-semibold bottom-[14.5rem] sm:text-2xl  min-[1500px]:bottom-[25%] 2xl:bottom-[27%]'>
+        Top 100 games of{' '}
+        <span className='relative inline-block mx-2 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-white'>
+          <span className='relative text-main-red'>all</span>
+        </span>{' '}
+        time
+      </h2>
+    </div>
   );
 };
 

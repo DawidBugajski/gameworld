@@ -1,7 +1,7 @@
 import React from 'react';
 import WishlistIcon from 'components/WishlistIcon';
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <>
       <WishlistIcon />
@@ -9,4 +9,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

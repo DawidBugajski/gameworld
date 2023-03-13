@@ -7,46 +7,50 @@ import { Link } from 'react-router-dom';
 const Carousel = ({ data }) => {
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 2000,
     autoplay: true,
     slidesToShow: 8,
-    slidesToScroll: 2,
-    autoplaySpeed: 3000,
+    slidesToScroll: 8,
+    autoplaySpeed: 5000,
     initialSlide: 0,
     arrow: false,
     responsive: [
       {
-        breakpoint: 1500,
+        breakpoint: 1536,
         settings: {
           slidesToShow: 6,
-          slidesToScroll: 1,
+          slidesToScroll: 6,
           infinite: true,
           adaptiveHeight: true,
+          speed: 1000,
         },
       },
       {
-        breakpoint: 1200,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 1,
+          slidesToScroll: 4,
           infinite: true,
           adaptiveHeight: true,
+          speed: 700,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           initialSlide: 0,
+          speed: 500,
         },
       },
       {
-        breakpoint: 400,
+        breakpoint: 640,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           initialSlide: 0,
+          speed: 500,
         },
       },
     ],
@@ -58,7 +62,7 @@ const Carousel = ({ data }) => {
         {data.map((game) => (
           <div
             className='carousel__card'
-            onClick={() => console.log(game)}
+            onClick={() => console.log(game)} // delte after
             key={game.id}
           >
             <img
@@ -79,6 +83,3 @@ const Carousel = ({ data }) => {
 };
 
 export default Carousel;
-
-// top-1/2 -translate-y-1/2
-// <Link to={`/games/${game.id}`}>

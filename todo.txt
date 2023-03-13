@@ -1,5 +1,4 @@
-https://api.rawg.io/api/games?dates=2023-03-12,2023-12-31&ordering=-rating&key=9ed8d5b158a14bba9743c10d1f7ef132 - pokazuje gry które dopiero będą miały premiere, tylko jak ustawić 1 date dynamicznie
-
+// add skeleton or something while fetching component with carousel
 
   //TODO - Move this to relevant component (premiere games)
 
@@ -8,3 +7,7 @@ https://api.rawg.io/api/games?dates=2023-03-12,2023-12-31&ordering=-rating&key=9
 
   import { getNextDay } from 'utils/helpers/getNextDay';
 import { API_KEY, BASE_URL } from 'utils/constans';
+////////////////////////////////////////////////////////////////////////
+/dla obu tych komponentów ustaw za pomocą tailwindcss transition na pojawianie i znikanie, oraz poprawić żeby to miało idealne wymiary
+
+// problem z top 100 games na różnych przeglądarkach, może wyjebać to z absoluta
