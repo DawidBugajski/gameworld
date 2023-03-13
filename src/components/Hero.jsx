@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <div className='min-h-[600px] lg:min-h-[700px] bg-center layout bg-hero hero bg-cover flex flex-col justify-between items-center py-4'>
+    <div className='min-h-[600px] lg:min-h-[700px] bg-center layout bg-hero hero bg-cover flex flex-col justify-between items-center py-4 relative'>
       <div className='z-10 flex flex-col justify-center flex-1 w-10/12 gap-6 text-right'>
         <h2 className='text-3xl italic font-bold tracking-widest'>
           The Witcher 3: Wild Hunt

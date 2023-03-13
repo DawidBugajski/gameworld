@@ -27,7 +27,9 @@ const TopGames = () => {
     },
   });
   if (isLoading) return <SkeletonLoaderTopGames />;
-  if (error) return `Error ${error.message}`;
+  if (error) return <SkeletonLoaderTopGames />;
+
+  // if (error) return `Error ${error.message}`;
 
   return (
     <div className='bg-[#181A1B] relative'>
