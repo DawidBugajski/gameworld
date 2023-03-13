@@ -1,2 +1,2 @@
-export const API_KEY = '7efe092c929749abb1398edae2a86ee5';
+export const API_KEY = '76cb8b2b755e459baa2b0262c9aadfef';
 export const BASE_URL = 'https://api.rawg.io/api/games';

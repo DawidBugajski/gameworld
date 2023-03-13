@@ -27,9 +27,14 @@ const TopGames = () => {
     },
   });
   if (isLoading) return <SkeletonLoaderTopGames />;
-  if (error) return <SkeletonLoaderTopGames />;
-
+  //TODO: Refactore Later
   // if (error) return `Error ${error.message}`;
+  if (error)
+    return (
+      <div className='p-5 bg-[#181A1B] min-h-[330px]'>
+        <p>error.message</p>
+      </div>
+    );
 
   return (
     <div className='bg-[#181A1B] relative'>
