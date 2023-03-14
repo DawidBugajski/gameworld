@@ -14,11 +14,10 @@ const GamePremieres = () => {
     queryFn: () =>
       axios.get(PREMIERE_GAMES_URL).then((res) => res.data.results),
   });
-  if (isLoading) return <SkeletonLoaderTopGames />;
 
+  if (isLoading) return <SkeletonLoaderTopGames />;
   if (error) return <ErrorFetchingData error={error} />;
 
-  console.log(PREMIERE_GAMES_URL);
   return (
     <div className='relative w-full p-5 text-white bg-fixed bg-center bg-cover lg:p-8 shadow-left premiere bg-premiere'>
       <h3 className='relative text-xl italic text-center uppercase mb-7 sm:text-2xl'>
@@ -34,4 +33,4 @@ const GamePremieres = () => {
 
 export default GamePremieres;
 
-// przerobić ten kod? dodaj rodzaj gry (1 tag) i resuolty , czy skeleton jest potrzebny?, dodaj hover, linkowanie
+// add skeleton && jeśli sidebar rozwinięty to może od lg zmieńmy ilość kolumn
