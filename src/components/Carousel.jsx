@@ -60,11 +60,7 @@ const Carousel = ({ data }) => {
     <div className='relative py-4 mx-6 overflow-hidden'>
       <Slider {...settings}>
         {data.map((game) => (
-          <div
-            className='carousel__card'
-            onClick={() => console.log(game)} // delte after
-            key={game.id}
-          >
+          <div className='carousel__card' key={game.id}>
             <img
               className='object-cover w-full h-full transition-all duration-150 rounded-xl '
               src={game.background_image}

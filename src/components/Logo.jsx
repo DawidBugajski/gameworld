@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Logo = () => {
   return (
     <Link to='/'>
-      <div className='absolute text-center uppercase cursor-pointer top-5 left-5 lg:text-lg lg:relative lg:flex lg:flex-col lg:leading-3 lg:left-0 lg:mb-3'>
+      <div className='absolute z-50 text-center uppercase cursor-pointer top-5 left-5 lg:text-lg lg:relative lg:flex lg:flex-col lg:leading-3 lg:left-0 lg:mb-3'>
         <span className='text-lg italic font-bold uppercase lg:leading-[5px] lg:text-[12px] text-main-red'>
           Game
         </span>

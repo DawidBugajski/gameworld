@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <div className='min-h-[600px] lg:min-h-[700px] bg-center layout bg-hero hero bg-cover flex flex-col justify-between items-center py-4 relative'>
-      <div className='z-10 flex flex-col justify-center flex-1 w-10/12 gap-6 text-right'>
+    <div className='shadow-left lg:min-h-[650px] min-h-[600px] bg-center bg-hero hero bg-cover flex flex-col justify-between items-center py-4 relative lg:bg-top-40'>
+      <div className='relative flex flex-col justify-center flex-1 w-10/12 gap-6 text-right'>
         <h2 className='text-3xl italic font-bold tracking-widest'>
           The Witcher 3: Wild Hunt
         </h2>
@@ -17,7 +17,7 @@ const Hero = () => {
           <Button>See more</Button>
         </Link>
       </div>
-      <h2 className='z-10 self-start pl-6 text-xl italic font-semibold text-left sm:text-2xl'>
+      <h2 className='relative self-start pl-6 text-xl italic font-semibold text-left sm:text-2xl'>
         Top 100 games of{' '}
         <span className='relative inline-block mx-2 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-white'>
           <span className='relative text-main-red'>all</span>

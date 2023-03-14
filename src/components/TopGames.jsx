@@ -4,11 +4,13 @@ import { useQuery } from '@tanstack/react-query';
 import { API_KEY, BASE_URL } from 'utils/constans';
 import Carousel from './Carousel';
 import SkeletonLoaderTopGames from './SkeletonLoaderTopGames';
+import ErrorFetchingData from './ErrorFetchingData';
 
 const TopGames = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['gamesHomePage'],
-
+    cacheTime: 10 * 60 * 1000,
+    staleTime: 5 * 60 * 1000,
     // APi returns only 20 results (games), if you want pring the top 100, You have to loop it.
     queryFn: async () => {
       const promises = [];
@@ -27,14 +29,8 @@ const TopGames = () => {
     },
   });
   if (isLoading) return <SkeletonLoaderTopGames />;
-  //TODO: Refactore Later
-  // if (error) return `Error ${error.message}`;
-  if (error)
-    return (
-      <div className='p-5 bg-[#181A1B] min-h-[330px]'>
-        <p>error.message</p>
-      </div>
-    );
+
+  if (error) return <ErrorFetchingData error={error} />;
 
   return (
     <div className='bg-[#181A1B] relative'>
@@ -44,3 +40,5 @@ const TopGames = () => {
 };
 
 export default TopGames;
+
+// cache time, cache first => po każdym cofnięciu się na zakładkę od nowa walę request

@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         hero: "url('/src/assets/images/home-background.jpg')",
+        premiere: "url('/src/assets/images/home-premiere.jpg')",
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],

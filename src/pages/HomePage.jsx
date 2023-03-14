@@ -8,7 +8,7 @@ const HomePage = () => {
     <>
       <Hero />
       <TopGames />
-      {/* <GamePremieres /> */}
+      <GamePremieres />
     </>
   );
 };

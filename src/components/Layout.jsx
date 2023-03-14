@@ -9,7 +9,7 @@ const Layout = () => {
   const insetLayout = isMenuOpen ? 'lg:ml-[300px]' : 'lg:ml-[100px]';
 
   return (
-    <>
+    <div className='shadow-left'>
       <Sidebar />
       <div
         className={`flex flex-col text-white ${insetLayout} transition-all duration-300`}
@@ -17,7 +17,7 @@ const Layout = () => {
         <ContentRoutes />
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 
