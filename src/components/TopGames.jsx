@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { API_KEY, BASE_URL } from 'utils/constans';
 import Carousel from './Carousel';
-import SkeletonLoaderTopGames from './SkeletonLoaderTopGames';
+import SkeletonTopGames from './SkeletonTopGames';
 import ErrorFetchingData from './ErrorFetchingData';
 
 const TopGames = () => {
@@ -28,7 +28,7 @@ const TopGames = () => {
       return games;
     },
   });
-  if (isLoading) return <SkeletonLoaderTopGames />;
+  if (isLoading) return <SkeletonTopGames />;
 
   if (error) return <ErrorFetchingData error={error} />;
 

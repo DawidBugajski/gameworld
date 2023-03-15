@@ -59,16 +59,16 @@ const Carousel = ({ data }) => {
   return (
     <div className='relative py-4 mx-6 overflow-hidden'>
       <Slider {...settings}>
-        {data.map((game) => (
-          <div className='carousel__card' key={game.id}>
+        {data.map(({ id, background_image: image, name }) => (
+          <div className='carousel__card' key={id}>
             <img
               className='object-cover w-full h-full transition-all duration-150 rounded-xl '
-              src={game.background_image}
-              alt={game.name}
+              src={image}
+              alt={name}
             />
-            <Link to={`/games/${game.id}`}>
+            <Link to={`games/s/${id}`}>
               <h3 className='absolute w-10/12 p-[10px] text-sm font-bold text-left uppercase transition-all duration-150 -translate-x-1/2 border-l-2 cursor-pointer border-main-red bottom-[10%] left-1/2'>
-                {game.name}
+                {name}
               </h3>
             </Link>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SkeletonLoaderTopGames = () => {
+const SkeletonTopGames = () => {
   return (
     <div className='p-5 bg-[#181A1B]'>
       <div className='flex animate-pulse'>
@@ -17,4 +17,4 @@ const SkeletonLoaderTopGames = () => {
   );
 };
 
-export default SkeletonLoaderTopGames;
+export default SkeletonTopGames;
