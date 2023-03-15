@@ -66,7 +66,7 @@ const Carousel = ({ data }) => {
               src={image}
               alt={name}
             />
-            <Link to={`games/s/${id}`}>
+            <Link to={`/games/${id}`}>
               <h3 className='absolute w-10/12 p-[10px] text-sm font-bold text-left uppercase transition-all duration-150 -translate-x-1/2 border-l-2 cursor-pointer border-main-red bottom-[10%] left-1/2'>
                 {name}
               </h3>

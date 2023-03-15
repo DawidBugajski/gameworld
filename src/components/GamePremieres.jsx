@@ -16,9 +16,6 @@ const GamePremieres = () => {
       axios.get(PREMIERE_GAMES_URL).then((res) => res.data.results),
   });
 
-  // if (isLoading) return <SkeletonPremiereGames data={data} />;
-  // if (error) return <ErrorFetchingData error={error} />;
-
   return (
     <div className='relative w-full p-5 text-white bg-fixed bg-center bg-cover lg:p-8 shadow-left premiere bg-premiere'>
       <PremiereHeader />

@@ -19,7 +19,7 @@ const GameDetails = () => {
   }
 
   const { name } = data;
-
+  console.log(data);
   return (
     <div className='h-screen text-white bg-black'>
       <h1>{name}</h1>
@@ -29,3 +29,5 @@ const GameDetails = () => {
 };
 
 export default GameDetails;
+
+// co bym chciał tu umieścić,
