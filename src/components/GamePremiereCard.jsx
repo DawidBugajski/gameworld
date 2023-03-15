@@ -13,43 +13,45 @@ const GamePremiereCard = ({ data }) => {
 
   return (
     <>
-      {data.slice(0, 1).map((game) => (
-        <Link to={`/games/${game.id}`}>
-          <div
-            key={game.id}
-            className='container relative w-full mx-auto mb-8 bg-center bg-cover cursor-pointer h-72 lg:h-96 group'
-            style={{ backgroundImage: `url(${game.background_image})` }}
-          >
-            <div className='absolute bottom-0 left-0 right-0 p-6 transition-all duration-300 bg-black bg-opacity-75 group-hover:bg-opacity-100'>
-              <strong className='text-xl font-bold lg:text-4xl'>
-                {game.name}
-              </strong>
-              <p className='mt-2 text-sm lg:text-lg'>{game.released}</p>
-            </div>
-          </div>
-        </Link>
-      ))}
-      <div className={`container mx-auto lg:grid lg:gap-6 ${gridColumns}`}>
-        {data.slice(1).map((game) => (
-          <Link to={`/games/${game.id}`}>
+      {data
+        .slice(0, 1)
+        .map(({ id, background_image: image, name, released }) => (
+          <Link to={`/games/${id}`} key={id}>
             <div
-              key={game.id}
-              className='container relative w-full mx-auto mb-8 bg-center bg-cover cursor-pointer h-72 group'
-              style={{ backgroundImage: `url(${game.background_image})` }}
+              className='container relative w-full mx-auto mb-8 bg-center bg-cover cursor-pointer h-72 lg:h-96 group'
+              style={{ backgroundImage: `url(${image})` }}
             >
-              <div
-                className={`absolute bottom-0 left-0 right-0 p-6 transition-all duration-300 bg-black bg-opacity-75 group-hover:bg-opacity-100 lg:text-sm xl:p-6 ${paddings}`}
-              >
-                <strong
-                  className={`text-xl font-bold lg:text-sm 2xl:text-base ${fonts}`}
-                >
-                  {game.name}
+              <div className='absolute bottom-0 left-0 right-0 p-6 transition-all duration-300 bg-black bg-opacity-75 group-hover:bg-opacity-100'>
+                <strong className='text-xl font-bold lg:text-4xl'>
+                  {name}
                 </strong>
-                <p className='mt-2 text-sm'>{game.released}</p>
+                <p className='mt-2 text-sm lg:text-lg'>{released}</p>
               </div>
             </div>
           </Link>
         ))}
+      <div className={`container mx-auto lg:grid lg:gap-6 ${gridColumns}`}>
+        {data
+          .slice(1)
+          .map(({ id, background_image: image, name, released }) => (
+            <Link to={`/games/${id}`} key={id}>
+              <div
+                className='container relative w-full mx-auto mb-8 bg-center bg-cover cursor-pointer h-72 group'
+                style={{ backgroundImage: `url(${image})` }}
+              >
+                <div
+                  className={`absolute bottom-0 left-0 right-0 p-6 transition-all duration-300 bg-black bg-opacity-75 group-hover:bg-opacity-100 lg:text-sm xl:p-6 ${paddings}`}
+                >
+                  <strong
+                    className={`text-xl font-bold lg:text-sm 2xl:text-base ${fonts}`}
+                  >
+                    {name}
+                  </strong>
+                  <p className='mt-2 text-sm'>{released}</p>
+                </div>
+              </div>
+            </Link>
+          ))}
       </div>
     </>
   );
