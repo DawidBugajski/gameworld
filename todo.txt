@@ -1,2 +1,1 @@
-1) When one of the components disappears from the react query do some animation between component appearances
-2) 
+
