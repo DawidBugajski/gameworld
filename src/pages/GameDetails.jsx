@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { API_KEY, BASE_URL } from 'utils/constans';
 import PageBackgroundImage from 'components/PageBackgroundImage';
-import Platforms from 'components/Platforms';
+import PageGameHeader from 'components/PageGameHeader';
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -30,13 +30,13 @@ const GameDetails = () => {
 
   return (
     <div className='h-screen bg-[#151515] shadow-left relative'>
-      <div className='container relative z-10 flex flex-col items-center justify-center mx-auto mt-20'>
-        <Platforms
-          playtime={playtime}
+      <div className='relative z-10 flex flex-col items-center mt-20 lg:mt-12'>
+        <PageGameHeader
           released={released}
+          playtime={playtime}
           platforms={platforms}
+          name={name}
         />
-        <h1 className='text-4xl italic uppercase'>{name}</h1>
       </div>
       <PageBackgroundImage image={image} />
     </div>

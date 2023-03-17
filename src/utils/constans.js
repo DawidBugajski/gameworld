@@ -23,3 +23,4 @@ export { ReactComponent as Epic } from '../assets/svg/epic-games.svg';
 export { ReactComponent as AppStore } from '../assets/svg/appstore.svg';
 export { ReactComponent as Gog } from '../assets/svg/gog.svg';
 export { ReactComponent as Itch } from '../assets/svg/itch.svg';
+export { ReactComponent as Steam } from '../assets/svg/steam.svg';
