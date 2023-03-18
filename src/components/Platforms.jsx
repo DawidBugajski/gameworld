@@ -9,8 +9,6 @@ const Platforms = ({ platforms }) => {
     </React.Fragment>
   ));
 
-  console.log(platformNames);
-
   return (
     <div className='flex justify-center w-full h-4 gap-2 sm:h-6 lg:gap-4'>
       {platformIcons}

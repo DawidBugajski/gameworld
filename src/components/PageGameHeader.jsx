@@ -5,7 +5,6 @@ import { getDateFormatter } from 'utils/helpers/getDateFormatter';
 const PageGameHeader = ({ released, playtime, platforms, name }) => {
   const gamePremiere = getDateFormatter.format(new Date(released));
 
-  // pretier-ignore
   const averagePlaytime =
     playtime !== 0 ? (
       <p className='font-mono text-xs uppercase sm:text-sm lg:text-sm lg:tracking-widest'>
@@ -20,7 +19,7 @@ const PageGameHeader = ({ released, playtime, platforms, name }) => {
     ) : null;
 
   return (
-    <div className='container flex flex-col items-center h-full '>
+    <div className='flex flex-col items-center h-full '>
       <div className='flex flex-wrap items-center justify-center w-full gap-5 '>
         <Platforms platforms={platforms} />
         {releasedGame}

@@ -2,8 +2,8 @@
 
 export const getNextDay = () => {
   const currentDate = new Date();
-  const nextDay = new Date(currentDate); // create a copy of the current date and time
-  nextDay.setDate(currentDate.getDate() + 1); // set the date of the new Date object to the day after the current date
+  const nextDay = new Date(currentDate);
+  nextDay.setDate(currentDate.getDate() + 1);
   const year = nextDay.getFullYear();
   const month = nextDay.getMonth() + 1; // The value returned by getMonth() is between 0 and 11, so we add 1 to get the correct month value
   const day = nextDay.getDate();
