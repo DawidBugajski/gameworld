@@ -4,6 +4,8 @@ import axios from 'axios';
 import { API_KEY, BASE_URL } from 'utils/constans';
 import PageBackgroundImage from 'components/PageBackgroundImage';
 import PageGameHeader from 'components/PageGameHeader';
+import Metacritic from 'components/Metacritic';
+import GameDescription from 'components/GameDescription';
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -27,6 +29,7 @@ const GameDetails = () => {
     released,
     parent_platforms: platforms,
     description_raw: description,
+    metacritic,
   } = data;
 
   return (
@@ -38,13 +41,11 @@ const GameDetails = () => {
           platforms={platforms}
           name={name}
         />
-        <div className='flex gap-4 mt-4'>
-          <p className='text-white bg-black basis-2/3'>
-            OPIS GIERY:{description}
-          </p>
-          <div className='flex flex-col flex-grow text-black bg-white'>
+        <div className='flex flex-col gap-4 mt-4 lg:flex-row'>
+          <GameDescription desc={description} />
+          <div className='flex flex-col flex-grow order-first text-black bg-white lg:order-last'>
             <div className='flex'>
-              <p className='bg-purple-300 basis-1/6'>METACRITIC COMPONENT</p>
+              <Metacritic meta={metacritic} />
               <p className='flex-grow bg-slate-400'>
                 GENRES_NAME - KATEGORIE GIERY
               </p>
@@ -62,17 +63,8 @@ const GameDetails = () => {
 
 export default GameDetails;
 
-// What else should i add:
-// description_raw (if exist)
-// genres_name - rodzaj giery
-// metacritic
-// reddit_url (if exist)
-// stores
-// website
-// /games/{game_pk}/parent-games - dlc
-// /games/{game_pk}/screenshots - screenshots
-// /games/{id}/movies - trailers
-// /games/{game_pk}/game-series - lore
+// opisu gry może nie być, wtedy trzeba rozciągnąć drugi komponent
+// metacritic może nie być
 
 // Opis gry
 // Rodzaj gry
