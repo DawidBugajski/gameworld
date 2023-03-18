@@ -5,16 +5,25 @@ const Metacritic = ({ meta }) => {
 
   const backgroundColor =
     meta <= 19
-      ? 'bg-[#F44336]'
+      ? '[#F44336]'
       : meta <= 39
-      ? 'bg-[#FF9800]'
+      ? '[#FF9800]'
       : meta <= 59
-      ? 'bg-[#FFEB3B]'
+      ? '[#FFEB3B]'
       : meta <= 79
-      ? 'bg-[#8BC34A]'
-      : 'bg-[#4CAF50]';
+      ? '[#8BC34A]'
+      : '[#4CAF50]';
+  const gradient = `bg-gradient-to-b from-${backgroundColor} to-black`;
 
-  return <div className={`w-full h-full ${backgroundColor}`}>{meta}</div>;
+  return (
+    <div
+      className={`w-12 h-12 2xl:w-16 2xl:h-16 ${gradient} flex items-center justify-center rounded-full lg:order-first flex-shrink-0 lg:w-12 lg:h-12`}
+    >
+      <span className='text-xl font-bold text-white lg:text-2xl 2xl:text-4xl'>
+        {meta}
+      </span>
+    </div>
+  );
 };
 
 export default Metacritic;

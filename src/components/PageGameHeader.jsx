@@ -25,7 +25,7 @@ const PageGameHeader = ({ released, playtime, platforms, name }) => {
         {releasedGame}
         {averagePlaytime}
       </div>
-      <h1 className='mt-4 text-2xl italic text-center uppercase 2xl:text-5xl fancy-undeline'>
+      <h1 className='px-4 mt-4 text-2xl italic text-center uppercase lg:px-0 2xl:text-5xl fancy-undeline'>
         {name}
       </h1>
     </div>

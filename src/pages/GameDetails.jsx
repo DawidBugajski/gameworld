@@ -6,6 +6,9 @@ import PageBackgroundImage from 'components/PageBackgroundImage';
 import PageGameHeader from 'components/PageGameHeader';
 import Metacritic from 'components/Metacritic';
 import GameDescription from 'components/GameDescription';
+import GameURLS from 'components/GameURLS';
+import Stores from 'components/Stores';
+import Genres from 'components/Genres';
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -30,6 +33,7 @@ const GameDetails = () => {
     parent_platforms: platforms,
     description_raw: description,
     metacritic,
+    genres,
   } = data;
 
   return (
@@ -41,18 +45,15 @@ const GameDetails = () => {
           platforms={platforms}
           name={name}
         />
-        <div className='flex flex-col gap-4 mt-4 lg:flex-row'>
+        <div className='flex flex-col w-full gap-4 px-4 mt-4 lg:mt-5 lg:flex-row '>
           <GameDescription desc={description} />
-          <div className='flex flex-col flex-grow order-first text-black bg-white lg:order-last'>
-            <div className='flex'>
+          <div className='flex flex-wrap items-center content-start flex-grow order-first gap-4 lg:order-last'>
+            <div className='flex items-center justify-center w-full gap-2 lg:flex-wrap xl:flex-nowrap lg:justify-start'>
               <Metacritic meta={metacritic} />
-              <p className='flex-grow bg-slate-400'>
-                GENRES_NAME - KATEGORIE GIERY
-              </p>
+              <Genres genres={genres} />
             </div>
-            <p className='flex-grow bg-orange-300'>STORSY</p>
-            <p>WEBSITE</p>
-            <p>REDDIT URL</p>
+            <Stores />
+            <GameURLS />
           </div>
         </div>
       </div>
@@ -76,3 +77,4 @@ export default GameDetails;
 // Zrzuty ekranu
 // Zwiastuny
 // Lore
+// zamiast mapowania w komponentach zrób poprawną destrukturyzacje tutaj i przekaż to jak należy xd
