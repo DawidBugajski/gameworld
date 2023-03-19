@@ -1,31 +1,35 @@
 // prettier-ignore
 import {
-  Playstation, Apple, Ios, Linux, Nintendo, Pc, Android, Xbox, Threedo, Atari, Commodore, Web, Sega, Steam, Gog, GooglePlay, Itch, Epic
+  Playstation, Apple, Ios, Linux, Nintendo, Pc, Android, Xbox, Threedo, Atari, Commodore, Web, Sega, Steam, Gog, GooglePlay, Itch, Epic, PSStore, XboxStore, NintendoStore, AppStore
 } from 'utils/constans';
 export const getPlatformIcon = (platformName) => {
-  const classes = 'fill-white hover:fill-black';
+  const classes = 'fill-white';
   switch (platformName) {
     case 'PlayStation':
-    case 'PlayStation Store':
       return <Playstation className={classes} />;
+    case 'PlayStation Store':
+      return <PSStore className={classes} />;
     case 'Apple Macintosh':
-    case 'Apple Store':
       return <Apple className={classes} />;
+    case 'App Store':
+      return <AppStore className={classes} />;
     case 'iOS':
       return <Ios className={classes} />;
     case 'Linux':
       return <Linux className={classes} />;
     case 'Nintendo':
-    case 'Nintendo Store':
       return <Nintendo className={classes} />;
+    case 'Nintendo Store':
+      return <NintendoStore className={classes} />;
     case 'PC':
       return <Pc className={classes} />;
-    case 'android':
+    case 'Android':
       return <Android className={classes} />;
     case 'Xbox':
+      return <Xbox className={classes} />;
     case 'Xbox Store':
     case 'Xbox 360 Store':
-      return <Xbox className={classes} />;
+      return <XboxStore className={classes} />;
     case '3DO':
       return <Threedo className={classes} />;
     case 'Atari':

@@ -24,3 +24,6 @@ export { ReactComponent as AppStore } from '../assets/svg/appstore.svg';
 export { ReactComponent as Gog } from '../assets/svg/gog.svg';
 export { ReactComponent as Itch } from '../assets/svg/itch.svg';
 export { ReactComponent as Steam } from '../assets/svg/steam.svg';
+export { ReactComponent as PSStore } from '../assets/svg/ps_store.svg';
+export { ReactComponent as XboxStore } from '../assets/svg/xbox_store.svg';
+export { ReactComponent as NintendoStore } from '../assets/svg/nintendo_store.svg';

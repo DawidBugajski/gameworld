@@ -34,6 +34,9 @@ const GameDetails = () => {
     description_raw: description,
     metacritic,
     genres,
+    stores,
+    reddit_url: reddit,
+    website,
   } = data;
 
   return (
@@ -45,15 +48,15 @@ const GameDetails = () => {
           platforms={platforms}
           name={name}
         />
-        <div className='flex flex-col w-full gap-4 px-4 mt-4 lg:mt-5 lg:flex-row '>
+        <div className='flex flex-col w-full gap-2 px-4 mt-4 lg:gap-4 lg:mt-5 lg:flex-row '>
           <GameDescription desc={description} />
-          <div className='flex flex-wrap items-center content-start flex-grow order-first gap-4 lg:order-last'>
+          <div className='flex flex-wrap items-center content-start flex-grow order-first gap-2 sm:gap-3 md:gap-4 lg:order-last'>
             <div className='flex items-center justify-center w-full gap-2 lg:flex-wrap xl:flex-nowrap lg:justify-start'>
               <Metacritic meta={metacritic} />
               <Genres genres={genres} />
             </div>
-            <Stores />
-            <GameURLS />
+            <Stores stores={stores} />
+            <GameURLS website={website} reddit={reddit} />
           </div>
         </div>
       </div>
