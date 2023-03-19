@@ -22,18 +22,24 @@ const Stores = ({ stores }) => {
   ));
 
   return (
-    <div className='flex flex-col gap-4 mt-1 basis-full'>
-      <p className='relative text-lg italic font-bold text-center uppercase lg:text-base lg:text-left 2xl:text-xl'>
-        Where{' '}
-        <span className='relative inline-block mx-2 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-white'>
-          <span className='relative text-main-red'>to</span>
-        </span>{' '}
-        buy
-      </p>
-      <div className={`grid grid-cols-2 gap-2 lg:grid-cols-1 xl:grid-cols-2`}>
-        {storeItem}
-      </div>
-    </div>
+    <>
+      {stores.length !== 0 && (
+        <div className='flex flex-col gap-4 mt-1 basis-full'>
+          <p className='relative text-lg italic font-bold text-center uppercase lg:text-base lg:text-left 2xl:text-xl'>
+            Where{' '}
+            <span className='relative inline-block mx-2 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-white'>
+              <span className='relative text-main-red'>to</span>
+            </span>{' '}
+            buy
+          </p>
+          <div
+            className={`grid grid-cols-2 gap-2 lg:grid-cols-1 xl:grid-cols-2`}
+          >
+            {storeItem}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
