@@ -5,15 +5,15 @@ const Metacritic = ({ meta }) => {
 
   const backgroundColor =
     meta <= 19
-      ? '[#F44336]'
+      ? '#F44336'
       : meta <= 39
-      ? '[#FF9800]'
+      ? '#FF9800'
       : meta <= 59
-      ? '[#FFEB3B]'
+      ? '#FFEB3B'
       : meta <= 79
-      ? '[#8BC34A]'
-      : '[#4CAF50]';
-  const gradient = `bg-gradient-to-b from-${backgroundColor} to-black`;
+      ? '#8BC34A'
+      : '#4CAF50';
+  const gradient = `bg-gradient-to-b from-[${backgroundColor}] to-black`;
 
   return (
     <div
