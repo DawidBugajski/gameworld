@@ -41,6 +41,10 @@ const GameDetails = () => {
     tags,
   } = data;
 
+  console.log(description);
+  const justifyFlex =
+    description !== '' ? 'justify-start' : 'justify-center lg:justify-center';
+
   return (
     <div className='bg-[#151515] min-h-screen shadow-left relative pb-4'>
       <div className='container relative z-10 flex flex-col items-center mx-auto mt-20 lg:mt-12'>
@@ -50,9 +54,11 @@ const GameDetails = () => {
           platforms={platforms}
           name={name}
         />
-        <div className='flex flex-col w-full gap-2 px-4 mt-4 lg:gap-4 lg:mt-5 lg:flex-row '>
+        <div
+          className={`flex flex-col w-full gap-2 px-4 mt-4 lg:gap-4 lg:mt-5 lg:flex-row ${justifyFlex}`}
+        >
           <GameDescription desc={description} />
-          <div className='flex flex-wrap items-center content-start flex-grow order-first gap-4 lg:order-last'>
+          <div className='flex flex-wrap items-center content-start order-first gap-4 lg:order-last'>
             <div className='flex items-center justify-center w-full gap-2 lg:flex-wrap xl:flex-nowrap lg:justify-start'>
               <Metacritic meta={metacritic} />
               <Genres genres={genres} />
@@ -74,3 +80,5 @@ export default GameDetails;
 // DLC
 // Zwiastuny
 // Lore
+
+// description_raw !== ''
