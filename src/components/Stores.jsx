@@ -21,6 +21,9 @@ const Stores = ({ stores }) => {
     </Link>
   ));
 
+  const gridCols =
+    stores.length <= 1 ? 'mx-auto w-1/2 grid-cols-1 lg:w-full' : 'grid-cols-2';
+
   return (
     <>
       {stores.length !== 0 && (
@@ -33,7 +36,7 @@ const Stores = ({ stores }) => {
             buy
           </p>
           <div
-            className={`grid grid-cols-2 gap-2 lg:grid-cols-1 xl:grid-cols-2`}
+            className={`${gridCols} grid gap-2 lg:grid-cols-1 xl:grid-cols-2`}
           >
             {storeItem}
           </div>
@@ -44,5 +47,3 @@ const Stores = ({ stores }) => {
 };
 
 export default Stores;
-
-// jak poszerzyć sklep jeśli

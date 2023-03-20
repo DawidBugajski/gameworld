@@ -1,3 +1,3 @@
 1) remember of handling error components
 2) url with gamename not with id
-3) tam gdzie bedzie sekcja z lore, moge na tło ustawić background image 2 z api jeśli istnieje a jeśli nie no to wjebać coś na sztywno
+3) jak nie ma opisu gry to troche lipnie to wygląda

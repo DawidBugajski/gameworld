@@ -9,6 +9,7 @@ import GameDescription from 'components/GameDescription';
 import GameURLS from 'components/GameURLS';
 import Stores from 'components/Stores';
 import Genres from 'components/Genres';
+import GameTags from 'components/GameTags';
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -37,10 +38,11 @@ const GameDetails = () => {
     stores,
     reddit_url: reddit,
     website,
+    tags,
   } = data;
 
   return (
-    <div className='h-screen bg-[#151515] shadow-left relative'>
+    <div className='bg-[#151515] min-h-screen shadow-left relative pb-4'>
       <div className='container relative z-10 flex flex-col items-center mx-auto mt-20 lg:mt-12'>
         <PageGameHeader
           released={released}
@@ -57,6 +59,7 @@ const GameDetails = () => {
             </div>
             <Stores stores={stores} />
             <GameURLS website={website} reddit={reddit} />
+            <GameTags tags={tags} />
           </div>
         </div>
       </div>
@@ -67,14 +70,7 @@ const GameDetails = () => {
 
 export default GameDetails;
 
-// Opis gry
-// Rodzaj gry
-// Ocena Metacritic
-// Link do subredditu, jeśli istnieje
-// Link do strony internetowej, jeśli istnieje
-// Sklepy, w których można kupić grę
-// DLC
 // Zrzuty ekranu
+// DLC
 // Zwiastuny
 // Lore
-// zamiast mapowania w komponentach zrób poprawną destrukturyzacje tutaj i przekaż to jak należy xd

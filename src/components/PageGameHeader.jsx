@@ -19,8 +19,8 @@ const PageGameHeader = ({ released, playtime, platforms, name }) => {
     ) : null;
 
   return (
-    <div className='flex flex-col items-center h-full '>
-      <div className='flex flex-wrap items-center justify-center w-full gap-5 '>
+    <div className='flex flex-col items-center h-full'>
+      <div className='flex flex-wrap items-center justify-center w-full gap-5'>
         <Platforms platforms={platforms} />
         {releasedGame}
         {averagePlaytime}
