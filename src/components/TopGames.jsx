@@ -9,8 +9,7 @@ import ErrorFetchingData from './ErrorFetchingData';
 const TopGames = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['gamesHomePage'],
-    cacheTime: 10 * 60 * 1000,
-    staleTime: 5 * 60 * 1000,
+
     // APi returns only 20 results (games), if you want pring the top 100, You have to loop it.
     queryFn: async () => {
       const promises = [];
