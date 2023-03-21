@@ -14,6 +14,11 @@ import GameTags from 'components/GameTags';
 const GameDetails = () => {
   const { id } = useParams();
 
+  const getGameData = (endpoint) => () =>
+    axios
+      .get(`${BASE_URL}/${id}/${endpoint}?key=${API_KEY}`)
+      .then((res) => res.data);
+
   const [
     gameDetailsQuery,
     gameScreenshotsQuery,
@@ -28,25 +33,10 @@ const GameDetails = () => {
       },
       {
         queryKey: ['gameScreenshots', id],
-        queryFn: () =>
-          axios
-            .get(`${BASE_URL}/${id}/screenshots?key=${API_KEY}`)
-            .then((res) => res.data),
+        queryFn: getGameData('screenshots'),
       },
-      {
-        queryKey: ['gameDlc', id],
-        queryFn: () =>
-          axios
-            .get(`${BASE_URL}/${id}/additions?key=${API_KEY}`)
-            .then((res) => res.data),
-      },
-      {
-        queryKey: ['gameSeries', id],
-        queryFn: () =>
-          axios
-            .get(`${BASE_URL}/${id}/game-series?key=${API_KEY}`)
-            .then((res) => res.data),
-      },
+      { queryKey: ['gameDlc', id], queryFn: getGameData('additions') },
+      { queryKey: ['gameSeries', id], queryFn: getGameData('game-series') },
     ],
   });
 
@@ -59,14 +49,11 @@ const GameDetails = () => {
   }
 
   const gameDetails = gameDetailsQuery.data;
-
-  console.log(
-    gameScreenshotsQuery.data?.results,
-    gameDlcQuery.data?.results,
-    gameSeriesQuery.data?.results
+  const gameScreenshots = gameScreenshotsQuery.data?.results?.map(
+    ({ image }) => image
   );
+  console.log(gameScreenshots);
 
-  console.log(gameDetails);
   const {
     name,
     background_image: image,
