@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
+import { useQueries } from '@tanstack/react-query';
 import axios from 'axios';
 import { API_KEY, BASE_URL } from 'utils/constans';
 import PageBackgroundImage from 'components/PageBackgroundImage';
@@ -14,18 +14,59 @@ import GameTags from 'components/GameTags';
 const GameDetails = () => {
   const { id } = useParams();
 
-  const { isLoading, error, data } = useQuery(['gameDetails', id], () =>
-    axios.get(`${BASE_URL}/${id}?key=${API_KEY}`).then((res) => res.data)
-  );
+  const [
+    gameDetailsQuery,
+    gameScreenshotsQuery,
+    gameDlcQuery,
+    gameSeriesQuery,
+  ] = useQueries({
+    queries: [
+      {
+        queryKey: ['gameDetails', id],
+        queryFn: () =>
+          axios.get(`${BASE_URL}/${id}?key=${API_KEY}`).then((res) => res.data),
+      },
+      {
+        queryKey: ['gameScreenshots', id],
+        queryFn: () =>
+          axios
+            .get(`${BASE_URL}/${id}/screenshots?key=${API_KEY}`)
+            .then((res) => res.data),
+      },
+      {
+        queryKey: ['gameDlc', id],
+        queryFn: () =>
+          axios
+            .get(`${BASE_URL}/${id}/additions?key=${API_KEY}`)
+            .then((res) => res.data),
+      },
+      {
+        queryKey: ['gameSeries', id],
+        queryFn: () =>
+          axios
+            .get(`${BASE_URL}/${id}/game-series?key=${API_KEY}`)
+            .then((res) => res.data),
+      },
+    ],
+  });
 
-  if (isLoading) {
+  if (gameDetailsQuery.isLoading) {
     return <div>Loading...</div>;
   }
 
-  if (error) {
-    return <div>An error has occurred: {error.message}</div>;
+  if (gameDetailsQuery.isError) {
+    return <div>Error: {gameDetailsQuery.error.message}</div>;
   }
-  console.log(data);
+
+  const gameDetails = gameDetailsQuery.data;
+
+  console.log(
+    gameScreenshotsQuery.data?.results,
+    gameDlcQuery.data?.results,
+    gameSeriesQuery.data?.results
+  );
+
+  console.log(gameDetails);
   const {
     name,
     background_image: image,
@@ -39,11 +80,9 @@ const GameDetails = () => {
     reddit_url: reddit,
     website,
     tags,
-  } = data;
+  } = gameDetails;
 
-  console.log(description);
-  const justifyFlex =
-    description !== '' ? 'justify-start' : 'justify-center lg:justify-center';
+  const justifyFlex = description !== '' ? 'justify-start' : 'justify-center';
 
   return (
     <div className='bg-[#151515] min-h-screen shadow-left relative pb-4'>
@@ -76,9 +115,4 @@ const GameDetails = () => {
 
 export default GameDetails;
 
-// Zrzuty ekranu
-// DLC
-// Zwiastuny
-// Lore
-
-// description_raw !== ''
+// https://www.js-howto.com/how-to-handle-multiple-queries-with-react-query/
