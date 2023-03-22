@@ -1,3 +1,3 @@
 1- remember of handling error components
 2- url with gamename not with id
-3- galery component / multiple requests [✅]
+3- galery component / multiple requests [✅] - after remember to test 
