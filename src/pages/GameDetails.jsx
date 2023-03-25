@@ -10,6 +10,7 @@ import GameURLS from 'components/GameURLS';
 import Stores from 'components/Stores';
 import Genres from 'components/Genres';
 import GameTags from 'components/GameTags';
+import Gallery from 'components/Gallery';
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -52,7 +53,6 @@ const GameDetails = () => {
   const gameScreenshots = gameScreenshotsQuery.data?.results?.map(
     ({ image }) => image
   );
-  console.log(gameScreenshots);
 
   const {
     name,
@@ -83,7 +83,11 @@ const GameDetails = () => {
         <div
           className={`flex flex-col w-full gap-2 px-4 mt-4 lg:gap-4 lg:mt-5 lg:flex-row ${justifyFlex}`}
         >
-          <GameDescription desc={description} />
+          <div className='flex flex-col text-sm shrink-0 2xl:text-base 2xl:basis-3/4 basis-2/3'>
+            <GameDescription desc={description} />
+            <Gallery screenshots={gameScreenshots} />
+          </div>
+
           <div className='flex flex-wrap items-center content-start order-first gap-4 lg:order-last'>
             <div className='flex items-center justify-center w-full gap-2 lg:flex-wrap xl:flex-nowrap lg:justify-start'>
               <Metacritic meta={metacritic} />

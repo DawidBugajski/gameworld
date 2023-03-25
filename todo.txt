@@ -2,4 +2,4 @@
 2- url with gamename not with id
 3- galery component / multiple requests [✅] - after remember to test 
 Galery:
-after click on thumbnail redux should store this information, and change some flag from false to true, then if flag is true, we should show component that will be positioned with index to wrap entire app, and show photos, we should have there arrow to navigate, close button, and below render all images, which user can click, and then navigate to clicked photo and show this on this main screen
+after click on thumbnail redux should store this information, and change some flag from false to true, then if flag is true, we should show component that will be positioned with index to wrap entire app, and show photos, we should have there arrow to navigate, close button, and below render all images, which user can click, and then navigate to clicked photo and show this on this main screen. Add some animation to make carousel from this or something like that?
