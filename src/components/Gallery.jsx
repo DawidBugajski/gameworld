@@ -1,13 +1,20 @@
 import React from 'react';
 import Slider from 'react-slick';
+import FullscreenGallery from './FullscreenGallery';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setOpenGallery } from 'store/slices/fullscreenGallerySlice';
 
 const Gallery = ({ screenshots }) => {
   const dispatch = useDispatch();
+
   const handleOpenFullscreenGallery = () => dispatch(setOpenGallery());
+  const { isGalleryOpen } = useSelector((state) => state.fullscreenGallery);
+  const isFullscreenGalleryOpen = isGalleryOpen
+    ? 'h-screen overflow-hidden'
+    : '';
+
   if (!screenshots) return null;
 
   const settings = {
@@ -21,7 +28,7 @@ const Gallery = ({ screenshots }) => {
   };
 
   return (
-    <div className='w-full mt-4'>
+    <div className={`w-full mt-4 ${isFullscreenGalleryOpen}`}>
       <Slider {...settings}>
         {screenshots.map((image) => (
           <div
@@ -38,6 +45,7 @@ const Gallery = ({ screenshots }) => {
           </div>
         ))}
       </Slider>
+      {isGalleryOpen && <FullscreenGallery />}
     </div>
   );
 };

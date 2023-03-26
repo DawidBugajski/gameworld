@@ -6,3 +6,4 @@ after click on thumbnail redux should store this information, and change some fl
  
 
  - jeśli po włączeniu fullscreen galerii cofniemy się na homepage to musimy ustawić flagę na false
+ - jeśli wyjdę z zakładki, cofnę dane albo coś w tym stylu, to jak ustawić zawsze flagę znowu na false, bo teraz jak cofnę się na homepage to mój sidebar dostaje wylewu, bo flaga dalej tam jest true / useNavigate z react router?
