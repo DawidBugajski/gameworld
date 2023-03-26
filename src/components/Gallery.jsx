@@ -2,9 +2,17 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { setOpenGallery } from 'store/slices/fullscreenGallerySlice';
 
 const Gallery = ({ screenshots }) => {
   console.log(screenshots);
+  const { isGalleryOpen } = useSelector((state) => state.fullscreenGallery);
+  const dispatch = useDispatch();
+  const handleOpenFullscreenGallery = () => {
+    dispatch(setOpenGallery());
+    console.log(isGalleryOpen);
+  };
 
   if (!screenshots) return null;
 
@@ -23,7 +31,7 @@ const Gallery = ({ screenshots }) => {
       <Slider {...settings}>
         {screenshots.map((image) => (
           <div
-            onClick={() => console.log('show gallery')}
+            onClick={handleOpenFullscreenGallery}
             className='relative p-1 cursor-pointer gallery_card'
             key={image}
           >
@@ -41,5 +49,3 @@ const Gallery = ({ screenshots }) => {
 };
 
 export default Gallery;
-
-// grid grid-cols-3 gap-4
