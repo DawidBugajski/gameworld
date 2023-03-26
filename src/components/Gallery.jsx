@@ -45,7 +45,7 @@ const Gallery = ({ screenshots }) => {
           </div>
         ))}
       </Slider>
-      {isGalleryOpen && <FullscreenGallery />}
+      {isGalleryOpen && <FullscreenGallery screenshots={screenshots} />}
     </div>
   );
 };

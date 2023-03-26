@@ -1,26 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from 'components/Header';
-import { useSelector, useDispatch } from 'react-redux';
-import { setCloseGallery } from 'store/slices/fullscreenGallerySlice';
-import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Sidebar = () => {
-  const dispatch = useDispatch();
-  const { pathname } = useLocation();
-
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
   const { isGalleryOpen } = useSelector((state) => state.fullscreenGallery);
   const hideSidebar = isGalleryOpen ? 'lg:hidden' : 'lg:fixed';
   const menuOverlay = isMenuOpen
     ? 'h-screen bg-main-gray z-20 lg:w-[300px]'
     : 'h-20 lg:w-[100px] lg:bg-main-gray lg:h-full';
-
-  // Set flag to false from fullscreenGallery when changing routing
-  useEffect(() => {
-    if (!pathname.includes('/games')) {
-      dispatch(setCloseGallery());
-    }
-  }, [dispatch, pathname]);
 
   return (
     <div
