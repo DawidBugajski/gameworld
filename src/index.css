@@ -67,3 +67,10 @@ body {
     background-size: 100% 88% !important;
   }
 }
+
+/* Gallery Page */
+
+.gallery_card {
+  width: 99% !important;
+}
+

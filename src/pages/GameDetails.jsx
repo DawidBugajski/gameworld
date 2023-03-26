@@ -81,7 +81,7 @@ const GameDetails = () => {
           name={name}
         />
         <div
-          className={`flex flex-col w-full gap-2 px-4 mt-4 lg:gap-4 lg:mt-5 lg:flex-row ${justifyFlex}`}
+          className={`flex flex-col w-full gap-2 px-4 mt-4 lg:gap-6 lg:mt-5 lg:flex-row ${justifyFlex}`}
         >
           <div className='flex flex-col text-sm shrink-0 2xl:text-base 2xl:basis-3/4 basis-2/3'>
             <GameDescription desc={description} />

@@ -1,19 +1,45 @@
 import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Gallery = ({ screenshots }) => {
   console.log(screenshots);
 
   if (!screenshots) return null;
 
+  const settings = {
+    infinite: true,
+    speed: 1500,
+    autoplay: true,
+    slidesToShow: 3,
+    autoplaySpeed: 5000,
+    arrows: false,
+    rows: 2,
+  };
+
   return (
-    <div className='flex flex-wrap my-2'>
-      {screenshots.map((image) => (
-        <img className='w-1/3' key={image} src={image} alt={image} />
-      ))}
+    <div className='w-full mt-4'>
+      <Slider {...settings}>
+        {screenshots.map((image) => (
+          <div
+            onClick={() => console.log('show gallery')}
+            className='relative p-1 cursor-pointer gallery_card'
+            key={image}
+          >
+            <img
+              className='w-full rounded-lg hover:scale-125'
+              src={image}
+              alt={image}
+            />
+            <div className='absolute inset-0 h-auto transition-opacity duration-300 bg-black rounded-lg opacity-0 hover:opacity-50'></div>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };
 
 export default Gallery;
 
-// hot to put gallery below description, container now is on flex row, czy nie muszę przerobić gameDescription, żeby był w 1 divie razem z galerią?
+// grid grid-cols-3 gap-4
