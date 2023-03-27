@@ -1,16 +1,8 @@
 1- remember of handling error components
 2- url with gamename not with id
-3- galery component / multiple requests [✅] - after remember to test 
-Galery:
-after click on thumbnail redux should store this information, and change some flag from false to true, then if flag is true, we should show component that will be positioned with index to wrap entire app, and show photos, we should have there arrow to navigate, close button, and below render all images, which user can click, and then navigate to clicked photo and show this on this main screen. Add some animation to make carousel from this or something like that?
- 
 
- - jeśli po włączeniu fullscreen galerii cofniemy się na homepage to musimy ustawić flagę na false [✅]
- - jeśli wyjdę z zakładki, cofnę dane albo coś w tym stylu, to jak ustawić zawsze flagę znowu na false, bo teraz jak cofnę się na homepage to mój sidebar dostaje wylewu, bo flaga dalej tam jest true / useNavigate z react router? [✅]
- - co jeśli fotki mają rózne rozmiary,  przykład: l4dead2
- - co jeśli jest mniej zdjęć, wtedy nie powinienem tego dawać w 2 rzędach a jednym (przykład: Left2Dead)
-- co jeśli miałem najpierw jedną gre odpaloną w routingu i odpale fullscreen galerie, a potem drugą i cofnę, nie powinienem mieć włączonej fullscreen galerii? [chyba to dalej nie do końca, działa, chyba powinienem w galerii też mieć useEffect który sprawdza i wykurwia tą flage]
+TODO: Galery Problems:
+ 1) http://localhost:3000/games/932481 - duplikuje dziwnie zdjęcia i się jebią rzędy
+ 2) alty do każdej galerii ustawić na nazwę gry
+ 3) co jeśli miałem najpierw jedną gre odpaloną w routingu i odpale fullscreen galerie, a potem drugą i cofnę, nie powinienem mieć włączonej fullscreen galerii? [chyba to dalej nie do końca, działa, chyba powinienem w galerii też mieć useEffect który sprawdza i wykurwia tą flage]
 
-
-- alty do miniatur w fullscreen galerii
-http://localhost:3000/games/932481 [coś jest nie tak z rowami xD]

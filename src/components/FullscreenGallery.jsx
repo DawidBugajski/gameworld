@@ -3,7 +3,10 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import { useSelector, useDispatch } from 'react-redux';
-import { setCurrentImageIndex } from 'store/slices/fullscreenGallerySlice';
+import {
+  setCurrentImageIndex,
+  setCloseGallery,
+} from 'store/slices/fullscreenGallerySlice';
 
 const FullscreenGallery = ({ screenshots }) => {
   const dispatch = useDispatch();
@@ -38,6 +41,8 @@ const FullscreenGallery = ({ screenshots }) => {
     dispatch(setCurrentImageIndex(index));
   };
 
+  const handleCloseGallery = () => dispatch(setCloseGallery());
+
   useEffect(() => {
     if (sliderRef.current) {
       sliderRef.current.slickGoTo(currentImageIndex);
@@ -46,6 +51,12 @@ const FullscreenGallery = ({ screenshots }) => {
 
   return (
     <div className='fixed inset-0 flex flex-col items-center justify-center bg-black z-[100]'>
+      <button
+        className='absolute z-50 w-20 h-20 text-white'
+        onClick={handleCloseGallery}
+      >
+        Close
+      </button>
       <div className='w-[1375px] mt-14 -mb-6'>
         <Slider {...settings} ref={sliderRef}>
           {screenshots.map((image) => (
