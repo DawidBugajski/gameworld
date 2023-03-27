@@ -10,6 +10,7 @@ after click on thumbnail redux should store this information, and change some fl
  - co jeśli fotki mają rózne rozmiary,  przykład: l4dead2
  - co jeśli jest mniej zdjęć, wtedy nie powinienem tego dawać w 2 rzędach a jednym (przykład: Left2Dead)
 - co jeśli miałem najpierw jedną gre odpaloną w routingu i odpale fullscreen galerie, a potem drugą i cofnę, nie powinienem mieć włączonej fullscreen galerii? [chyba to dalej nie do końca, działa, chyba powinienem w galerii też mieć useEffect który sprawdza i wykurwia tą flage]
-- http://localhost:3000/games/42857 problem z fullgallery miniaturami, jeśli jest mniej niż 6 to się jebie
-http://localhost:3000/games/11859 - problem z klikniętą miniaturką jeśli jest za mała
+
+
 - alty do miniatur w fullscreen galerii
+http://localhost:3000/games/932481 [coś jest nie tak z rowami xD]

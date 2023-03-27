@@ -19,9 +19,9 @@ const FullscreenGallery = ({ screenshots }) => {
     accessibility: false,
     draggable: false,
   };
-
+  console.log(screenshots.length);
   const thumbnailSettings = {
-    slidesToShow: 6,
+    slidesToShow: screenshots.length,
     arrows: false,
     initialSlide: currentImageIndex,
     responsive: [
