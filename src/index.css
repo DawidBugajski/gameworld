@@ -74,4 +74,22 @@ body {
 
 .gallery_card {
   width: 99% !important;
+  height: 220px;
+}
+
+/* Thumbnails Page */
+.thumbnail_card {
+  width: 90% !important;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 70px !important;
+}
+
+.slick-prev {
+  left: -120px !important;
+}
+.slick-next {
+  right: -65px !important;
 }
