@@ -26,13 +26,13 @@ const Gallery = ({ screenshots }) => {
   if (!screenshots) return null;
 
   const settings = {
-    infinite: true,
+    infinite: false,
     speed: 1500,
     autoplay: true,
-    slidesToShow: 3,
+    slidesToShow: screenshots.length <= 3 ? screenshots.length : 3,
     autoplaySpeed: 5000,
     arrows: false,
-    rows: 2,
+    rows: screenshots.length <= 3 ? 1 : 2,
   };
 
   return (
@@ -44,7 +44,10 @@ const Gallery = ({ screenshots }) => {
             className='relative p-1 cursor-pointer gallery_card'
             key={image}
           >
-            <img className='w-full h-full rounded-lg' src={image} alt={image} />
+            <div
+              className='w-full h-full bg-cover rounded-lg'
+              style={{ backgroundImage: `url(${image})` }}
+            />
             <div className='absolute inset-0 h-auto transition-opacity duration-300 bg-black rounded-lg opacity-0 hover:opacity-50'></div>
           </div>
         ))}

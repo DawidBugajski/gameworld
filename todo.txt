@@ -2,7 +2,7 @@
 2- url with gamename not with id
 
 TODO: Galery Problems:
- 1) http://localhost:3000/games/932481 - duplikuje dziwnie zdjęcia i się jebią rzędy
- 2) alty do każdej galerii ustawić na nazwę gry
- 3) co jeśli miałem najpierw jedną gre odpaloną w routingu i odpale fullscreen galerie, a potem drugą i cofnę, nie powinienem mieć włączonej fullscreen galerii? [chyba to dalej nie do końca, działa, chyba powinienem w galerii też mieć useEffect który sprawdza i wykurwia tą flage]
 
+ogarnąć miniaturki w fullscreen galerii
+
+http://localhost:3000/games/ - nic nie mam wtedy xD - po prostu dodać do routingu wtedy 404 ktore ma przekierować na homepage?

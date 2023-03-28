@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 const Sidebar = () => {
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
   const { isGalleryOpen } = useSelector((state) => state.fullscreenGallery);
-  const hideSidebar = isGalleryOpen ? 'lg:hidden' : 'lg:fixed';
+  const hideSidebar = isGalleryOpen ? 'hidden' : 'fixed';
   const menuOverlay = isMenuOpen
     ? 'h-screen bg-main-gray z-20 lg:w-[300px]'
     : 'h-20 lg:w-[100px] lg:bg-main-gray lg:h-full';

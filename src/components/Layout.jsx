@@ -24,7 +24,7 @@ const Layout = () => {
   }, [dispatch, pathname]);
 
   return (
-    <div className={`shadow-left ${isFullscreenGalleryOpen}`}>
+    <div className={`shadow-left scroll-smooth ${isFullscreenGalleryOpen}`}>
       <Sidebar />
       <div
         className={`flex flex-col text-white ${insetLayout} transition-all duration-300`}

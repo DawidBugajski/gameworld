@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
+import { MdClose } from 'react-icons/md';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   setCurrentImageIndex,
@@ -22,11 +23,12 @@ const FullscreenGallery = ({ screenshots }) => {
     accessibility: false,
     draggable: false,
   };
-  console.log(screenshots.length);
+
   const thumbnailSettings = {
     slidesToShow: screenshots.length,
     arrows: false,
     initialSlide: currentImageIndex,
+    className: 'thumbnail',
     responsive: [
       {
         breakpoint: 768,
@@ -50,32 +52,38 @@ const FullscreenGallery = ({ screenshots }) => {
   }, [currentImageIndex]);
 
   return (
-    <div className='fixed inset-0 flex flex-col items-center justify-center bg-black z-[100]'>
+    <div className='fixed inset-0 flex flex-col gap-5 items-center justify-center bg-black z-[100]'>
       <button
-        className='absolute z-50 w-20 h-20 text-white'
+        className='absolute top-[4%] z-50 transition-all duration-150 bg-white rounded-full opacity-75 right-[6%] hover:opacity-100'
         onClick={handleCloseGallery}
       >
-        Close
+        <MdClose fill='#000' className='text-6xl' />
       </button>
-      <div className='w-[1375px] mt-14 -mb-6'>
+      <div className='w-[77%]'>
         <Slider {...settings} ref={sliderRef}>
           {screenshots.map((image) => (
-            <div className='' key={image}>
-              <img className='mx-auto' src={image} alt={image} />
+            <div key={image}>
+              <div
+                className='h-[75vh] bg-center bg-cover'
+                style={{ backgroundImage: `url(${image})` }}
+              />
             </div>
           ))}
         </Slider>
       </div>
-      <div className='w-full scale-50 thumbnail_container'>
+      <div className='w-full'>
         <Slider {...thumbnailSettings}>
           {screenshots.map((image, index) => (
             <div
-              className='relative cursor-pointer thumbnail_card'
+              className='relative cursor-pointer h-[120px] thumbnail_card mx-auto'
               key={image}
               onClick={() => handleThumbnailClick(index)}
             >
-              <img className='rounded-lg ' src={image} alt={image} />
-              <div className='absolute inset-0 h-auto transition-opacity duration-300 bg-black rounded-lg opacity-0 hover:opacity-50'></div>
+              <div
+                className='w-full h-full bg-center bg-cover rounded-lg'
+                style={{ backgroundImage: `url(${image})` }}
+              />
+              <div className='absolute inset-0 h-auto transition-opacity duration-300 bg-black rounded-lg opacity-50 hover:opacity-0'></div>
             </div>
           ))}
         </Slider>

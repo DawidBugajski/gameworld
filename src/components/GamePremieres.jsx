@@ -10,8 +10,6 @@ import PremiereHeader from './PremiereHeader';
 const GamePremieres = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['premiereGames'],
-    cacheTime: 10 * 60 * 1000,
-    staleTime: 5 * 60 * 1000,
     queryFn: () =>
       axios.get(PREMIERE_GAMES_URL).then((res) => res.data.results),
   });

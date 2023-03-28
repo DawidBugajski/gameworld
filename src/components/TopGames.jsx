@@ -39,5 +39,3 @@ const TopGames = () => {
 };
 
 export default TopGames;
-
-// cache time, cache first => po każdym cofnięciu się na zakładkę od nowa walę request
