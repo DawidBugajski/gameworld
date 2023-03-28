@@ -33,6 +33,11 @@ const Gallery = ({ screenshots }) => {
     autoplaySpeed: 5000,
     arrows: false,
     rows: screenshots.length <= 3 ? 1 : 2,
+    responsive: [
+      // {
+      //   breakpoint:
+      // }
+    ],
   };
 
   return (
