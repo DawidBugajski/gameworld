@@ -55,13 +55,6 @@ body {
   outline: none;
 }
 
-/* Gallery Page */
-
-.gallery_card {
-  width: 99% !important;
-  height: 220px;
-}
-
 .thumbnail .slick-slide {
   width: 230px !important;
   margin: 0 10px !important;
@@ -71,6 +64,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.gallery_card {
+  height: 220px;
 }
 
 @media (min-width: 640px) {
@@ -115,4 +112,7 @@ body {
   .slick-next {
     right: -65px !important;
   }
+}
+
+@media (min-width: 1536px) {
 }

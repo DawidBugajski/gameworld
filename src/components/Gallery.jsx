@@ -34,9 +34,25 @@ const Gallery = ({ screenshots }) => {
     arrows: false,
     rows: screenshots.length <= 3 ? 1 : 2,
     responsive: [
-      // {
-      //   breakpoint:
-      // }
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          rows: 1,
+          autoplay: true,
+          infinite: true,
+        },
+      },
+
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          rows: 1,
+          autoplay: true,
+          infinite: true,
+        },
+      },
     ],
   };
 
@@ -50,7 +66,7 @@ const Gallery = ({ screenshots }) => {
             key={image}
           >
             <div
-              className='w-full h-full bg-cover rounded-lg'
+              className='w-full h-full bg-center bg-no-repeat bg-contain rounded-lg lg:bg-cover '
               style={{ backgroundImage: `url(${image})` }}
             />
             <div className='absolute inset-0 h-auto transition-opacity duration-300 bg-black rounded-lg opacity-0 hover:opacity-50'></div>

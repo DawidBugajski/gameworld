@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useQueries } from '@tanstack/react-query';
-import axios from 'axios';
 import { API_KEY, BASE_URL } from 'utils/constans';
+import { useSelector } from 'react-redux';
+import axios from 'axios';
 import PageBackgroundImage from 'components/PageBackgroundImage';
 import PageGameHeader from 'components/PageGameHeader';
 import Metacritic from 'components/Metacritic';
@@ -14,7 +15,7 @@ import Gallery from 'components/Gallery';
 
 const GameDetails = () => {
   const { id } = useParams();
-
+  const { isMenuOpen } = useSelector((state) => state.toggleMenu);
   const getGameData = (endpoint) => () =>
     axios
       .get(`${BASE_URL}/${id}/${endpoint}?key=${API_KEY}`)
@@ -83,7 +84,7 @@ const GameDetails = () => {
         <div
           className={`flex flex-col w-full gap-2 px-4 mt-4 lg:gap-6 lg:mt-5 lg:flex-row ${justifyFlex}`}
         >
-          <div className='flex flex-col text-sm shrink-0 2xl:text-base 2xl:basis-3/4 basis-2/3'>
+          <div className='flex flex-col text-sm shrink-0 2xl:text-base basis-2/3 2xl:basis-[60%] min-[1800px]:basis-3/4'>
             <GameDescription desc={description} />
             <Gallery screenshots={gameScreenshots} />
           </div>
@@ -107,3 +108,5 @@ const GameDetails = () => {
 export default GameDetails;
 
 // https://www.js-howto.com/how-to-handle-multiple-queries-with-react-query/
+
+// min-[1900px]:basis-3/4
