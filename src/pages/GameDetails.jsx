@@ -12,6 +12,7 @@ import Stores from 'components/Stores';
 import Genres from 'components/Genres';
 import GameTags from 'components/GameTags';
 import Gallery from 'components/Gallery';
+import GameDLC from 'components/GameDLC';
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -54,6 +55,15 @@ const GameDetails = () => {
   const gameScreenshots = gameScreenshotsQuery.data?.results?.map(
     ({ image }) => image
   );
+  const gameDLC = gameDlcQuery.data?.results;
+  const gameSeries = gameSeriesQuery.data?.results;
+
+  //! delete after
+  console.log('Expand your experience', gameDLC);
+  console.log(
+    "Can't get enough? Check out the other games in this lore",
+    gameSeries
+  );
 
   const {
     name,
@@ -74,7 +84,7 @@ const GameDetails = () => {
   const containerWidth = isMenuOpen ? 'lg:w-[65%]' : 'lg:w-full';
 
   return (
-    <div className='bg-[#151515] min-h-screen shadow-left relative pb-4'>
+    <div className='bg-[#151515] min-h-screen shadow-left relative'>
       <div className='container relative z-10 flex flex-col items-center mx-auto mt-20 lg:mt-12'>
         <PageGameHeader
           released={released}
@@ -103,12 +113,9 @@ const GameDetails = () => {
         </div>
       </div>
       <PageBackgroundImage image={image} />
+      <GameDLC />
     </div>
   );
 };
 
 export default GameDetails;
-
-// https://www.js-howto.com/how-to-handle-multiple-queries-with-react-query/
-
-// min-[1900px]:basis-3/4
