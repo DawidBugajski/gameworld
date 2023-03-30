@@ -81,7 +81,7 @@ const FullscreenGallery = ({ screenshots }) => {
           {screenshots.map((image) => (
             <div key={image}>
               <div
-                className='bg-contain bg-no-repeat min-h-[250px] sm:min-h-[350px] md:min-h-[450px] lg:h-[75vh] bg-center lg:bg-cover cursor-grab lg:cursor-auto'
+                className='bg-contain bg-no-repeat min-h-[250px] sm:min-h-[350px] md:min-h-[450px] lg:h-[75vh] bg-center cursor-grab lg:cursor-auto'
                 style={{ backgroundImage: `url(${image})` }}
               />
             </div>

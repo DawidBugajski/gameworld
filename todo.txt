@@ -5,8 +5,10 @@ TODO: Galery Problems:
 
 ogarnąć miniaturki w fullscreen galerii
 
-http://localhost:3000/games/ - nic nie mam wtedy xD - po prostu dodać do routingu wtedy 404 ktore ma przekierować na homepage?
-
-opakować requesty w jeden
-
-- zrobić całą galerie pod rwd, a potem całe rwd na page sprawdzić bo coś sie rozpierdoliło chyba
+- http://localhost:3000/games/ - nic nie mam wtedy xD - po prostu dodać do routingu wtedy 404 ktore ma przekierować na homepage?
+- opakować requesty w jeden
+- remember of handling error components, and all loading
+- url with gamename not with id
+- optional section dlc 
+- optional section family games (gwint, wither)
+- add to wishlist (show clicked games in wishlist, store in localstorage)
