@@ -71,6 +71,7 @@ const GameDetails = () => {
   } = gameDetails;
 
   const justifyFlex = description !== '' ? 'justify-start' : 'justify-center';
+  const containerWidth = isMenuOpen ? 'lg:w-[65%]' : 'lg:w-full';
 
   return (
     <div className='bg-[#151515] min-h-screen shadow-left relative pb-4'>
@@ -84,11 +85,12 @@ const GameDetails = () => {
         <div
           className={`flex flex-col w-full gap-2 px-4 mt-4 lg:gap-6 lg:mt-5 lg:flex-row ${justifyFlex}`}
         >
-          <div className='flex flex-col text-sm shrink-0 2xl:text-base basis-2/3 2xl:basis-[60%] min-[1800px]:basis-3/4'>
+          <div
+            className={`${containerWidth} 2xl:w-full flex flex-col text-sm shrink-0 2xl:text-base basis-2/3 2xl:basis-[60%] min-[1800px]:basis-3/4`}
+          >
             <GameDescription desc={description} />
             <Gallery screenshots={gameScreenshots} />
           </div>
-
           <div className='flex flex-wrap items-center content-start order-first gap-4 lg:order-last'>
             <div className='flex items-center justify-center w-full gap-2 lg:flex-wrap xl:flex-nowrap lg:justify-start'>
               <Metacritic meta={metacritic} />

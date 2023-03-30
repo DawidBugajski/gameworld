@@ -82,6 +82,9 @@ body {
   .fancy-undeline:hover {
     background-size: 100% 88% !important;
   }
+  .gallery_card {
+    height: 200px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -96,6 +99,9 @@ body {
   }
   .slick-next {
     right: -55px !important;
+  }
+  .gallery_card {
+    height: 220px;
   }
 }
 

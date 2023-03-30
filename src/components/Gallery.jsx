@@ -35,21 +35,20 @@ const Gallery = ({ screenshots }) => {
     rows: screenshots.length <= 3 ? 1 : 2,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           rows: 1,
-          autoplay: true,
+          autoplay: false,
           infinite: true,
         },
       },
-
       {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
           rows: 1,
-          autoplay: true,
+          autoplay: false,
           infinite: true,
         },
       },
@@ -62,7 +61,7 @@ const Gallery = ({ screenshots }) => {
         {screenshots.map((image, i) => (
           <div
             onClick={() => handleOpenFullscreenGallery(i)}
-            className='relative p-1 cursor-pointer gallery_card'
+            className='relative p-0 cursor-pointer lg:p-1 gallery_card'
             key={image}
           >
             <div

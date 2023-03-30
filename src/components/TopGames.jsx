@@ -12,14 +12,14 @@ const TopGames = () => {
 
     // APi returns only 20 results (games), if you want pring the top 100, You have to loop it.
     queryFn: async () => {
-      const promises = [];
+      const requests = [];
       for (let i = 1; i <= 5; i++) {
-        promises.push(
+        requests.push(
           axios.get(`${BASE_URL}?key=${API_KEY}&ordering=-ordering&page=${i}`)
         );
       }
 
-      const responses = await Promise.all(promises);
+      const responses = await axios.all(requests);
       const games = responses.reduce(
         (acc, curr) => acc.concat(curr.data.results),
         []
