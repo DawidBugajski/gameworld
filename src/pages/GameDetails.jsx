@@ -113,7 +113,7 @@ const GameDetails = () => {
         </div>
       </div>
       <PageBackgroundImage image={image} />
-      <GameDLC />
+      {gameDLC && gameDLC.length !== 0 && <GameDLC dlc={gameDLC} />}
     </div>
   );
 };

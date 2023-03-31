@@ -35,16 +35,19 @@ body {
   position: relative;
 }
 
-.carousel__card:hover img {
+.carousel__card:hover img,
+.dlc__card:hover img {
   filter: brightness(50%);
   transform: scale(0.95);
 }
 
-.carousel__card:hover h3 {
+.carousel__card:hover h3,
+.dlc__card:hover h3 {
   opacity: 1;
   color: #fff;
 }
-.carousel__card h3 {
+.carousel__card h3,
+.dlc__card h3 {
   opacity: 0;
 }
 
