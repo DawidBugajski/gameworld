@@ -30,3 +30,5 @@ export const gallerySettings = (screenshots) => {
     ],
   };
 };
+
+// screenshots is undefined The above error occurred in the <Gallery> component: (z csgo kliknąłem w cs 1.6)

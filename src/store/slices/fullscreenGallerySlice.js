@@ -12,7 +12,6 @@ const fullscreenGallerySlice = createSlice({
     },
     setCurrentImageIndex: (state, action) => {
       state.currentImageIndex = action.payload;
-      console.log(state.currentImageIndex);
     },
   },
 });

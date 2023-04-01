@@ -12,8 +12,9 @@ import { gallerySettings } from 'utils/galleryCarouselSettings';
 
 const Gallery = ({ screenshots }) => {
   const dispatch = useDispatch();
-
   const { isGalleryOpen } = useSelector((state) => state.fullscreenGallery);
+  if (!screenshots) return null;
+  const settings = gallerySettings(screenshots);
 
   const handleOpenFullscreenGallery = (i) => {
     dispatch(setCurrentImageIndex(i));
@@ -23,8 +24,6 @@ const Gallery = ({ screenshots }) => {
   const isFullscreenGalleryOpen = isGalleryOpen
     ? 'h-screen overflow-hidden'
     : '';
-  const settings = gallerySettings(screenshots);
-  if (!screenshots) return null;
 
   return (
     <div className={`w-full mt-4 ${isFullscreenGalleryOpen}`}>
@@ -49,3 +48,4 @@ const Gallery = ({ screenshots }) => {
 };
 
 export default Gallery;
+// screenshots is undefined The above error occurred in the <Gallery> component: (z csgo kliknąłem w cs 1.6)

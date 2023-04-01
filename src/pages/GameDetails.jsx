@@ -13,6 +13,7 @@ import Genres from 'components/Genres';
 import GameTags from 'components/GameTags';
 import Gallery from 'components/Gallery';
 import GameDLC from 'components/GameDLC';
+import GameSeries from 'components/GameSeries';
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -59,12 +60,9 @@ const GameDetails = () => {
   const gameSeries = gameSeriesQuery.data?.results;
 
   //! delete after
-  console.log('Expand your experience', gameDLC);
-  console.log(
-    "Can't get enough? Check out the other games in this lore",
-    gameSeries
-  );
-
+  if (gameDetails && gameScreenshots && gameDLC && gameSeries) {
+    console.table(gameSeries);
+  }
   const {
     name,
     background_image: image,
@@ -114,6 +112,9 @@ const GameDetails = () => {
       </div>
       <PageBackgroundImage image={image} />
       {gameDLC && gameDLC.length !== 0 && <GameDLC dlc={gameDLC} />}
+      {gameSeries && gameSeries.length !== 0 && (
+        <GameSeries game={gameSeries} />
+      )}
     </div>
   );
 };

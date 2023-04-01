@@ -12,3 +12,4 @@ ogarnąć miniaturki w fullscreen galerii
 - optional section dlc 
 - optional section family games (gwint, wither)
 - add to wishlist (show clicked games in wishlist, store in localstorage)
+- po kliknięciu w cokolwiek jak jest refresh strony, niech przenosi do góry przeglądarki
