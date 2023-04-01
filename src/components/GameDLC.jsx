@@ -4,8 +4,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { dlcCarouselSettings } from 'utils/dlcCarouselSettings';
+
 const GameDLC = ({ dlc }) => {
   const settings = dlcCarouselSettings(dlc);
+
   return (
     <div className='relative flex flex-col justify-between w-full py-20 text-white bg-fixed bg-center bg-cover bg-dlc shadow-left premiere'>
       <h2 className='relative mx-auto text-2xl italic text-center uppercase w-fit lg:px-0 2xl:text-4xl fancy-undeline'>
@@ -17,7 +19,11 @@ const GameDLC = ({ dlc }) => {
             <div className='relative mx-auto dlc__card cursor-grab' key={id}>
               <img
                 className='object-cover w-full h-full transition-all duration-150 rounded-xl'
-                src={image}
+                src={
+                  image !== null
+                    ? image
+                    : 'https://via.placeholder.com/600x400?text=Game+Image'
+                }
                 alt={name}
               />
               <Link to={`/games/${id}`}>
