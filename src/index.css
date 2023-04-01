@@ -34,6 +34,11 @@ body {
   cursor: grab;
   position: relative;
 }
+.dlc__card {
+  height: 280px;
+  /* width: 200px !important; */
+  padding: 0 5px;
+}
 
 .carousel__card:hover img,
 .dlc__card:hover img {
@@ -53,7 +58,8 @@ body {
 
 .carousel__card:focus,
 .carousel__card:active,
-.gallery_card:focus,
+.dlc__card:focus,
+.dlc__card:active .gallery_card:focus,
 .gallery_card.active {
   outline: none;
 }
@@ -71,6 +77,11 @@ body {
 
 .gallery_card {
   height: 220px;
+}
+
+.dlc__carousel {
+  width: 100%;
+  margin: 0 auto;
 }
 
 @media (min-width: 640px) {

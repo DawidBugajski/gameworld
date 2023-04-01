@@ -27,6 +27,7 @@ const Gallery = ({ screenshots }) => {
 
   const settings = {
     infinite: false,
+    swipeToSlide: true,
     speed: 1500,
     autoplay: true,
     slidesToShow: screenshots.length <= 3 ? screenshots.length : 3,

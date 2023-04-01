@@ -1,27 +1,62 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const GameDLC = ({ dlc }) => {
+  const settings = {
+    className: 'dlc__carousel',
+    slidesToShow: dlc.length >= 8 ? 8 : dlc.length,
+    arrows: false,
+    autoplay: true,
+    swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: dlc.length >= 5 ? 5 : dlc.length,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          autoplay: false,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          autoplay: false,
+          slidesToShow: 2,
+        },
+      },
+    ],
+  };
+
   return (
-    <div className='relative w-full pt-20 text-white bg-fixed bg-center bg-cover bg-dlc shadow-left premiere'>
+    <div className='relative flex flex-col justify-between w-full py-20 text-white bg-fixed bg-center bg-cover bg-dlc shadow-left premiere'>
       <h2 className='relative mx-auto text-2xl italic text-center uppercase w-fit lg:px-0 2xl:text-4xl fancy-undeline'>
         Expand your experience...
       </h2>
-      <div className='relative flex flex-wrap justify-center gap-5 py-12 mx-auto'>
-        {dlc.map(({ id, background_image: image, name }) => (
-          <div className='h-[270px] w-[200px] relative dlc__card' key={id}>
-            <img
-              className='object-cover w-full h-full transition-all duration-150 rounded-xl'
-              src={image}
-              alt={name}
-            />
-            <Link to={`/games/${id}`}>
-              <h3 className='absolute w-10/12 p-[10px] text-sm font-bold text-left uppercase transition-all duration-150 -translate-x-1/2 border-l-2 cursor-pointer border-main-red bottom-[10%] left-1/2'>
-                {name}
-              </h3>
-            </Link>
-          </div>
-        ))}
+      <div className='relative flex justify-center w-full gap-5 px-4 py-12 mx-auto sm:mx-0'>
+        <Slider {...settings}>
+          {dlc.map(({ id, background_image: image, name }) => (
+            <div className='relative dlc__card cursor-grab' key={id}>
+              <img
+                className='object-cover w-full h-full transition-all duration-150 rounded-xl'
+                src={image}
+                alt={name}
+              />
+              <Link to={`/games/${id}`}>
+                <h3 className='absolute w-10/12 p-[10px] text-sm font-bold text-left uppercase transition-all duration-150 -translate-x-1/2 border-l-2 cursor-pointer border-main-red bottom-[10%] left-1/2'>
+                  {name}
+                </h3>
+              </Link>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );
@@ -30,6 +65,5 @@ const GameDLC = ({ dlc }) => {
 export default GameDLC;
 
 //https://www.react-spring.dev/docs/getting-started
-// what to do if dlc game doesn't have screenshot? some placeholder image? http://localhost:3000/games/3498
-
-// http://localhost:3000/games/42187 - przy simsach 4 wykurwia error (chyba problem jest jeśli z wyszukiwarki pizgniesz giere, np simsy 4)
+//placeholder photo if game doesn't have background image
+// co jeśli jest tylko 1 gra, bo teraz jest with 100 i to sie tak rozkurwia

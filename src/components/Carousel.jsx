@@ -3,62 +3,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Link } from 'react-router-dom';
+import { carouselSettings } from 'utils/carouselSettings';
 
 const Carousel = ({ data }) => {
-  const settings = {
-    infinite: true,
-    speed: 1500,
-    autoplay: true,
-    slidesToShow: 8,
-    slidesToScroll: 8,
-    autoplaySpeed: 5000,
-    initialSlide: 0,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1536,
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 6,
-          infinite: true,
-          adaptiveHeight: true,
-          speed: 1000,
-        },
-      },
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          infinite: true,
-          adaptiveHeight: true,
-          speed: 700,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          initialSlide: 0,
-          speed: 500,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 0,
-          speed: 500,
-        },
-      },
-    ],
-  };
-
   return (
     <div className='relative py-4 mx-6 overflow-hidden'>
-      <Slider {...settings}>
+      <Slider {...carouselSettings}>
         {data.map(({ id, background_image: image, name }) => (
           <div className='carousel__card' key={id}>
             <img
