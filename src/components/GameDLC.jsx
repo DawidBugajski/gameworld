@@ -3,38 +3,9 @@ import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import { dlcCarouselSettings } from 'utils/dlcCarouselSettings';
 const GameDLC = ({ dlc }) => {
-  const settings = {
-    className: 'dlc__carousel',
-    slidesToShow: dlc.length >= 8 ? 8 : dlc.length,
-    arrows: false,
-    autoplay: true,
-    swipeToSlide: true,
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: dlc.length >= 5 ? 5 : dlc.length,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          autoplay: false,
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 500,
-        settings: {
-          autoplay: false,
-          slidesToShow: 2,
-        },
-      },
-    ],
-  };
-
+  const settings = dlcCarouselSettings(dlc);
   return (
     <div className='relative flex flex-col justify-between w-full py-20 text-white bg-fixed bg-center bg-cover bg-dlc shadow-left premiere'>
       <h2 className='relative mx-auto text-2xl italic text-center uppercase w-fit lg:px-0 2xl:text-4xl fancy-undeline'>
@@ -43,7 +14,7 @@ const GameDLC = ({ dlc }) => {
       <div className='relative flex justify-center w-full gap-5 px-4 py-12 mx-auto sm:mx-0'>
         <Slider {...settings}>
           {dlc.map(({ id, background_image: image, name }) => (
-            <div className='relative dlc__card cursor-grab' key={id}>
+            <div className='relative mx-auto dlc__card cursor-grab' key={id}>
               <img
                 className='object-cover w-full h-full transition-all duration-150 rounded-xl'
                 src={image}

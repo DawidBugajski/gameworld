@@ -8,6 +8,7 @@ import {
   setOpenGallery,
   setCurrentImageIndex,
 } from 'store/slices/fullscreenGallerySlice';
+import { gallerySettings } from 'utils/galleryCarouselSettings';
 
 const Gallery = ({ screenshots }) => {
   const dispatch = useDispatch();
@@ -22,39 +23,8 @@ const Gallery = ({ screenshots }) => {
   const isFullscreenGalleryOpen = isGalleryOpen
     ? 'h-screen overflow-hidden'
     : '';
-
+  const settings = gallerySettings(screenshots);
   if (!screenshots) return null;
-
-  const settings = {
-    infinite: false,
-    swipeToSlide: true,
-    speed: 1500,
-    autoplay: true,
-    slidesToShow: screenshots.length <= 3 ? screenshots.length : 3,
-    autoplaySpeed: 5000,
-    arrows: false,
-    rows: screenshots.length <= 3 ? 1 : 2,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          rows: 1,
-          autoplay: false,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          rows: 1,
-          autoplay: false,
-          infinite: true,
-        },
-      },
-    ],
-  };
 
   return (
     <div className={`w-full mt-4 ${isFullscreenGalleryOpen}`}>

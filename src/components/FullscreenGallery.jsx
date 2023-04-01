@@ -8,53 +8,15 @@ import {
   setCurrentImageIndex,
   setCloseGallery,
 } from 'store/slices/fullscreenGallerySlice';
+import {
+  fullscreenMainSettings,
+  fullscreenThumbnailSettings,
+} from 'utils/fullscreenGalleryCarouselSettings';
 
 const FullscreenGallery = ({ screenshots }) => {
   const dispatch = useDispatch();
   const { currentImageIndex } = useSelector((state) => state.fullscreenGallery);
   const sliderRef = useRef(null);
-
-  const settings = {
-    infinite: true,
-    slidesToShow: 1,
-    autoplaySpeed: 5000,
-    arrows: true,
-    initialSlide: currentImageIndex,
-    accessibility: true,
-    draggable: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          draggable: false,
-          arrows: true,
-          accessibility: false,
-        },
-      },
-    ],
-  };
-
-  const thumbnailSettings = {
-    slidesToShow: screenshots.length,
-    arrows: false,
-    initialSlide: currentImageIndex,
-    className: 'thumbnail',
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-    ],
-  };
 
   const handleThumbnailClick = (index) => {
     dispatch(setCurrentImageIndex(index));
@@ -77,7 +39,7 @@ const FullscreenGallery = ({ screenshots }) => {
         <MdClose fill='#000' className='text-5xl lg:text-4xl xl:text-6xl' />
       </button>
       <div className='w-full lg:w-[77%]'>
-        <Slider {...settings} ref={sliderRef}>
+        <Slider {...fullscreenMainSettings(currentImageIndex)} ref={sliderRef}>
           {screenshots.map((image) => (
             <div key={image}>
               <div
@@ -89,7 +51,9 @@ const FullscreenGallery = ({ screenshots }) => {
         </Slider>
       </div>
       <div className='w-full lg:block'>
-        <Slider {...thumbnailSettings}>
+        <Slider
+          {...fullscreenThumbnailSettings(screenshots, currentImageIndex)}
+        >
           {screenshots.map((image, index) => (
             <div
               className='relative cursor-pointer h-[120px] thumbnail_card mx-auto'
