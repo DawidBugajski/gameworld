@@ -100,7 +100,7 @@ const GameDetails = () => {
               <Metacritic meta={metacritic} />
               <Genres genres={genres} />
             </div>
-            <Stores stores={stores} name={name} image={image} />
+            <Stores stores={stores} name={name} image={image} id={id} />
             <GameURLS website={website} reddit={reddit} />
             <GameTags tags={tags} />
           </div>

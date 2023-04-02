@@ -5,19 +5,19 @@ import {
   setRemoveFromWishlist,
 } from 'store/slices/wishlistSlice';
 
-const WishlistButton = ({ name, image }) => {
+const WishlistButton = ({ name, image, id }) => {
   const [showTooltip, setShowToolTip] = useState(false);
   const dispatch = useDispatch();
   const { games } = useSelector((state) => state.wishlist);
   const isGameInWishlist = games.some((game) => game.name === name);
 
   const handleAddGame = () => {
-    dispatch(setAddToWishlist({ name, image }));
+    dispatch(setAddToWishlist({ name, image, id }));
     setShowToolTip(true);
     setTimeout(() => setShowToolTip(false), 2000);
   };
   const handleDeleteGame = () =>
-    dispatch(setRemoveFromWishlist({ name, image }));
+    dispatch(setRemoveFromWishlist({ name, image, id }));
   return (
     <div className='relative'>
       <button

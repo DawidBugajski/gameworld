@@ -3,7 +3,7 @@ import { getPlatformIcon } from 'utils/helpers/getPlatformIcon';
 import { Link } from 'react-router-dom';
 import WishlistButton from './WishlistButton';
 
-const Stores = ({ stores, name, image }) => {
+const Stores = ({ stores, name, image, id }) => {
   const storeDetails = stores.map(({ store }) => {
     return {
       name: store.name,
@@ -39,7 +39,7 @@ const Stores = ({ stores, name, image }) => {
         )}
         <div className={`${gridCols} grid gap-2 lg:grid-cols-1 xl:grid-cols-2`}>
           {storeItem}
-          <WishlistButton name={name} image={image} />
+          <WishlistButton name={name} image={image} id={id} />
         </div>
       </div>
     </>
