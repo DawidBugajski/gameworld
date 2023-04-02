@@ -84,6 +84,16 @@ body {
   margin: 0 auto;
 }
 
+.dlc__carousel .slick-slide {
+  width: auto;
+  max-width: 900px !important;
+  margin: 0 auto;
+}
+
+.dlc__carousel .slick-track {
+  display: flex;
+}
+
 @media (min-width: 640px) {
   .fancy-undeline {
     background-image: linear-gradient(120deg, #dc1414, #781010 100%);

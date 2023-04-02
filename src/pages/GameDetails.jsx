@@ -59,10 +59,6 @@ const GameDetails = () => {
   const gameDLC = gameDlcQuery.data?.results;
   const gameSeries = gameSeriesQuery.data?.results;
 
-  //! delete after
-  if (gameDetails && gameScreenshots && gameDLC && gameSeries) {
-    console.table(gameSeries);
-  }
   const {
     name,
     background_image: image,
