@@ -10,9 +10,9 @@ const GameSeries = ({ game }) => {
   console.log(game);
   return (
     <div className='relative flex flex-col justify-between w-full py-20 text-white bg-fixed bg-center bg-cover bg-gameSeries shadow-left premiere'>
-      <h2 className='relative mx-auto text-2xl italic text-center uppercase w-fit lg:px-0 2xl:text-4xl fancy-undeline'>
+      <h3 className='relative mx-auto text-2xl italic text-center uppercase xl:text-2xl lg:text-xl md:text-2xl sm:text-xl w-fit lg:px-0 2xl:text-4xl fancy-undeline'>
         Can't get enough? Check out the other games in this lore
-      </h2>
+      </h3>
       <div className='relative flex justify-center w-full gap-5 px-4 py-12 mx-auto sm:mx-0'>
         <Slider {...settings}>
           {game.map(({ id, background_image: image, name }) => (

@@ -1,15 +1,7 @@
-1- remember of handling error components
-2- url with gamename not with id
-
-TODO: Galery Problems:
-
-ogarnąć miniaturki w fullscreen galerii
-
+TODO:
+- remember of handling error components
+- url with gamename not with id
 - http://localhost:3000/games/ - nic nie mam wtedy xD - po prostu dodać do routingu wtedy 404 ktore ma przekierować na homepage?
 - opakować requesty w jeden
-- remember of handling error components, and all loading
-- url with gamename not with id
-- optional section dlc 
-- optional section family games (gwint, wither)
-- add to wishlist (show clicked games in wishlist, store in localstorage)
+- add to wishlist (show clicked games in wishlist, store in localstorage) = po kliknięciu dodać mały tooltip niżej który informuje że gra została dodana na listę życzeń i niech zniknie po 2 sekundach
 - po kliknięciu w cokolwiek jak jest refresh strony, niech przenosi do góry przeglądarki
