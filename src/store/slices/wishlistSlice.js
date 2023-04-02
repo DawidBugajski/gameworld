@@ -8,6 +8,7 @@ const wishlistSlice = createSlice({
   reducers: {
     setAddToWishlist: (state, action) => {
       const game = action.payload;
+      if (state.games.some((item) => item.name === game.name)) return;
       state.games.push(game);
       console.log('ADDED NEW GAME', state.games);
     },

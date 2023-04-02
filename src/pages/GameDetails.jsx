@@ -14,7 +14,6 @@ import GameTags from 'components/GameTags';
 import Gallery from 'components/Gallery';
 import GameDLC from 'components/GameDLC';
 import GameSeries from 'components/GameSeries';
-import WishlistButton from 'components/WishlistButton';
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -101,10 +100,9 @@ const GameDetails = () => {
               <Metacritic meta={metacritic} />
               <Genres genres={genres} />
             </div>
-            <Stores stores={stores} />
+            <Stores stores={stores} name={name} image={image} />
             <GameURLS website={website} reddit={reddit} />
             <GameTags tags={tags} />
-            <WishlistButton name={name} image={image} />
           </div>
         </div>
       </div>

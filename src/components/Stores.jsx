@@ -1,8 +1,9 @@
 import React from 'react';
 import { getPlatformIcon } from 'utils/helpers/getPlatformIcon';
 import { Link } from 'react-router-dom';
+import WishlistButton from './WishlistButton';
 
-const Stores = ({ stores }) => {
+const Stores = ({ stores, name, image }) => {
   const storeDetails = stores.map(({ store }) => {
     return {
       name: store.name,
@@ -39,6 +40,7 @@ const Stores = ({ stores }) => {
             className={`${gridCols} grid gap-2 lg:grid-cols-1 xl:grid-cols-2`}
           >
             {storeItem}
+            <WishlistButton name={name} image={image} />
           </div>
         </div>
       )}
