@@ -14,7 +14,7 @@ const WishlistButton = ({ name, image, id }) => {
   const handleAddGame = () => {
     dispatch(setAddToWishlist({ name, image, id }));
     setShowToolTip(true);
-    setTimeout(() => setShowToolTip(false), 2000);
+    setTimeout(() => setShowToolTip(false), 1000);
   };
   const handleDeleteGame = () =>
     dispatch(setRemoveFromWishlist({ name, image, id }));
@@ -22,10 +22,10 @@ const WishlistButton = ({ name, image, id }) => {
     <div className='relative'>
       <button
         onClick={isGameInWishlist ? handleDeleteGame : handleAddGame}
-        className='flex items-center justify-center w-full gap-2 p-2 rounded-lg cursor-pointer bg-gradient-to-r from-main-red to-main-dark-red hover:from-main-red hover:to-neutral-800 lg:p-1 xl:p-2'
+        className='flex items-center justify-center w-full h-full gap-2 p-2 rounded-lg cursor-pointer bg-gradient-to-r from-main-red to-main-dark-red hover:from-main-red hover:to-neutral-800 lg:p-1 xl:p-2'
       >
         <p className='flex-shrink-0 font-sans text-sm xl:text-xs 2xl:text-sm'>
-          {isGameInWishlist ? 'Remove from wishlist' : 'Add to wishlist'}
+          {isGameInWishlist ? 'Remove' : 'Add to wishlist'}
         </p>
         <svg
           xmlns='http://www.w3.org/2000/svg'
