@@ -27,8 +27,8 @@ const Stores = ({ stores, name, image }) => {
 
   return (
     <>
-      {stores.length !== 0 && (
-        <div className='flex flex-col gap-4 mt-1 basis-full'>
+      <div className='flex flex-col gap-4 mt-1 basis-full'>
+        {stores.length !== 0 && (
           <p className='relative text-lg italic font-bold text-center uppercase lg:text-base lg:text-left 2xl:text-xl'>
             Where{' '}
             <span className='relative inline-block mx-2 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-white'>
@@ -36,14 +36,12 @@ const Stores = ({ stores, name, image }) => {
             </span>{' '}
             buy
           </p>
-          <div
-            className={`${gridCols} grid gap-2 lg:grid-cols-1 xl:grid-cols-2`}
-          >
-            {storeItem}
-            <WishlistButton name={name} image={image} />
-          </div>
+        )}
+        <div className={`${gridCols} grid gap-2 lg:grid-cols-1 xl:grid-cols-2`}>
+          {storeItem}
+          <WishlistButton name={name} image={image} />
         </div>
-      )}
+      </div>
     </>
   );
 };

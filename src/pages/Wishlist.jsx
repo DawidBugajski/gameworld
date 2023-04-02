@@ -30,3 +30,4 @@ const Wishlist = () => {
 export default Wishlist;
 
 // remember put placeholder image if game doesn't provide image
+// max 100 games or comunicate, buy premium and fuck off

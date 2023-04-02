@@ -14,7 +14,9 @@ const wishlistSlice = createSlice({
     },
     setRemoveFromWishlist: (state, action) => {
       const deletedGame = action.payload;
-      state.games.filter((game) => game.name !== deletedGame.name);
+      state.games = state.games.filter(
+        (game) => game.name !== deletedGame.name
+      );
       console.log('REMOVED GAME', state.games);
     },
     setClearWishlist: (state) => {
