@@ -39,4 +39,7 @@ const Wishlist = () => {
 
 export default Wishlist;
 
+// napis z boku odwrócony your wishlist o 90 stopni i jak się skończy to taka kreska gradientowa może, na środku karty z grami, gra by miała image oraz napis, i jakiś dropdown w który moglibyśmy na pewno usunąć tą gre
 // max 100 games or comunicate, buy premium and fuck off
+// show counter how many left games you can add ?
+// filtering games by ?
