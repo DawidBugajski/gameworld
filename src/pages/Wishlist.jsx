@@ -1,11 +1,10 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setClearWishlist } from 'store/slices/wishlistSlice';
-import FavoriteGames from 'components/FavoriteGames';
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
+import WishlistCard from 'components/WishlistCard';
 
 const Wishlist = () => {
+  const { games } = useSelector((state) => state.wishlist);
   const dispatch = useDispatch();
   const handleClearWishlist = () => dispatch(setClearWishlist());
 
@@ -18,9 +17,11 @@ const Wishlist = () => {
         <button className='py-2 text-2xl' onClick={handleClearWishlist}>
           Clear wishlist
         </button>
-        <DndProvider backend={HTML5Backend}>
-          <FavoriteGames />
-        </DndProvider>
+        <div className='flex flex-wrap gap-8'>
+          {games.map(({ image, name, id }) => (
+            <WishlistCard image={image} name={name} id={id} key={id} />
+          ))}
+        </div>
       </div>
     </div>
   );

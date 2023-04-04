@@ -4,7 +4,7 @@ import { FaTrash } from 'react-icons/fa';
 import { setRemoveFromWishlist } from 'store/slices/wishlistSlice';
 import { useDispatch } from 'react-redux';
 
-const WishlistCard = ({ image, name, id, index }) => {
+const WishlistCard = ({ image, name, id }) => {
   const dispatch = useDispatch();
   const handleDeleteGame = (game) => dispatch(setRemoveFromWishlist(game));
 
