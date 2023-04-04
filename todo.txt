@@ -4,3 +4,4 @@ TODO:
 - http://localhost:3000/games/ - nic nie mam wtedy xD - po prostu dodać do routingu wtedy 404 ktore ma przekierować na homepage?
 - opakować requesty w jeden
 - po kliknięciu w cokolwiek jak jest refresh strony, niech przenosi do góry przeglądarki
+https://medium.com/@rukeeojigbo/git-basics-an-idiots-guide-99445a56bd65
