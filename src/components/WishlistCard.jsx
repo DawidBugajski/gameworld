@@ -3,24 +3,13 @@ import { Link } from 'react-router-dom';
 import { FaTrash } from 'react-icons/fa';
 import { setRemoveFromWishlist } from 'store/slices/wishlistSlice';
 import { useDispatch } from 'react-redux';
-import { useDrag } from 'react-dnd';
 
 const WishlistCard = ({ image, name, id, index }) => {
   const dispatch = useDispatch();
   const handleDeleteGame = (game) => dispatch(setRemoveFromWishlist(game));
 
-  const [{ isDragging }, drag] = useDrag(() => ({
-    type: 'game',
-    item: { id, index },
-    collect: (monitor) => ({
-      isDragging: !!monitor.isDragging(),
-    }),
-  }));
-
   return (
     <div
-      style={{ opacity: isDragging ? 0.5 : 1 }}
-      ref={drag}
       key={id}
       className='relative w-56 transition-all duration-150 rounded-lg shadow-xl cursor-pointer h-72 group hover:shadow-cyan-800 hover:shadow-2xl hover:scale-95'
     >

@@ -29,27 +29,9 @@ const wishlistSlice = createSlice({
       state.games = [];
       localStorage.removeItem('wishlistItems');
     },
-    setMoveGame: (state, action) => {
-      const { id, atIndex } = action.payload;
-      const game = state.games.find((game) => game.id === id);
-      const currentIndex = state.games.indexOf(game);
-
-      if (currentIndex !== -1 && atIndex !== -1) {
-        state.games.splice(currentIndex, 1);
-        state.games.splice(atIndex, 0, game);
-      }
-      localStorage.setItem(
-        'wishlistItems',
-        JSON.stringify(state.games.map((game) => game))
-      );
-    },
   },
 });
 
-export const {
-  setAddToWishlist,
-  setRemoveFromWishlist,
-  setClearWishlist,
-  setMoveGame,
-} = wishlistSlice.actions;
+export const { setAddToWishlist, setRemoveFromWishlist, setClearWishlist } =
+  wishlistSlice.actions;
 export default wishlistSlice.reducer;
