@@ -11,7 +11,7 @@ const WishlistCard = ({ image, name, id }) => {
   return (
     <div
       key={id}
-      className='relative w-56 transition-all duration-150 rounded-lg shadow-xl cursor-pointer wish-card h-72 group hover:shadow-cyan-800 hover:shadow-2xl hover:scale-95'
+      className='relative transition-all duration-150 rounded-lg shadow-xl cursor-pointer w-52 wish-card h-72 group hover:shadow-cyan-800 hover:shadow-2xl hover:scale-95'
     >
       <FaTrash
         onClick={() => handleDeleteGame({ image, name, id })}
@@ -36,3 +36,4 @@ const WishlistCard = ({ image, name, id }) => {
 };
 
 export default WishlistCard;
+//w-56 h-72
