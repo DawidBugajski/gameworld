@@ -31,8 +31,8 @@ const WarningPopup = () => {
               Reject
             </button>
             <button
-              className={`transition-colors duration-150 flex items-center px-4 py-1 font-bold tracking-widest text-green-700 uppercase border-[1px] border-transparent hover:border-green-700 ${
-                isClearing && 'border-green-700'
+              className={`transition-colors duration-150 flex items-center px-4 py-1 font-bold tracking-widest text-green-700 uppercase border-[1px] border-transparent hover:border-green-700 focus:outline-none focus:shadow-outline ${
+                isClearing && 'borderClearing'
               }`}
               onClick={handleClearWishlist}
             >
