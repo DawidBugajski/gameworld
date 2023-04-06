@@ -26,7 +26,7 @@ const Gallery = ({ screenshots }) => {
     : '';
 
   return (
-    <div className={`w-full mt-4 ${isFullscreenGalleryOpen}`}>
+    <div className={`w-full my-4 ${isFullscreenGalleryOpen}`}>
       <Slider {...settings}>
         {screenshots.map((image, i) => (
           <div
