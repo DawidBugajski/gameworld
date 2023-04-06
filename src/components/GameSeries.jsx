@@ -7,7 +7,7 @@ import { dlcCarouselSettings } from 'utils/dlcCarouselSettings';
 
 const GameSeries = ({ game }) => {
   const settings = dlcCarouselSettings(game);
-  console.log(game);
+
   return (
     <div className='relative flex flex-col justify-between w-full py-20 text-white bg-fixed bg-center bg-cover bg-gameSeries shadow-left premiere'>
       <h3 className='relative mx-auto text-2xl italic text-center uppercase xl:text-2xl lg:text-xl md:text-2xl sm:text-xl w-fit lg:px-0 2xl:text-4xl fancy-undeline'>

@@ -20,7 +20,7 @@ const WarningPopup = () => {
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center '>
       <div className='absolute inset-0 bg-black opacity-75'></div>
-      <div className='relative z-10 p-1 rounded-lg bg-gradient-to-br from-main-red via-purple-700 to-main-dark-red'>
+      <div className='relative z-10 p-1 rounded-lg bg-gradient-to-br from-main-red via-purple-600 to-main-dark-red'>
         <div className='flex flex-col gap-6 p-8 font-mono text-lg text-white bg-black'>
           <p>Are you sure you want to clear your wishlist?</p>
           <div className='flex justify-center gap-6 transition-all duration-1000'>
@@ -31,7 +31,7 @@ const WarningPopup = () => {
               Reject
             </button>
             <button
-              className={`transition-colors duration-150 flex items-center px-4 py-1 font-bold tracking-widest text-green-700 uppercase focus:outline-none focus:shadow-outline border-[1px] border-transparent hover:border-green-700 ${
+              className={`transition-colors duration-150 flex items-center px-4 py-1 font-bold tracking-widest text-green-700 uppercase border-[1px] border-transparent hover:border-green-700 ${
                 isClearing && 'border-green-700'
               }`}
               onClick={handleClearWishlist}

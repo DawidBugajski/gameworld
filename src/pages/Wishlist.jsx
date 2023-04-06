@@ -13,20 +13,42 @@ const Wishlist = () => {
   const handleShowWarningPopup = () => dispatch(setShowClearPopupWarning());
 
   return (
-    <div className='relative shadow-left h-screen bg-gradient-to-b from-[#1f2937] to-[#111827]'>
+    <div className='relative shadow-left min-h-screen bg-gradient-to-b from-[#1f2937] to-[#111827] overflow-hidden'>
       <span className='text-[100px] fixed lg:text-[150px] 2xl:top-[10%] left-[4%] top-[15%] rotate-[15deg] pointer-events-none 2xl:text-[150px] text-[#F2F2F2B3] opacity-5 min-[1800px]:text-[200px]'>
         鬼滅の刃 刀鍛冶の里編 ᕦ(⋋‿☄)ᕗ
       </span>
       {games.length >= 1 && (
-        <button className='p-2 text-2xl' onClick={handleShowWarningPopup}>
-          Clear wishlist
-        </button>
+        <div className='relative grid py-4 place-content-center'>
+          <button
+            onClick={handleShowWarningPopup}
+            className='relative inline-flex items-center px-3 py-2 mx-auto text-sm tracking-wide text-center text-white transition-all duration-150 rounded-lg bg-main-dark-red hover:shadow-lg hover:bg-main-gray group'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              className='w-5 h-5 mr-2'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16'
+              />
+            </svg>
+            Clear
+            <span className='inline-flex items-center justify-center w-5 h-5 p-3 ml-2 text-xs font-semibold text-white transition-all duration-150 bg-black rounded-full group-hover:bg-main-dark-red'>
+              {games.length}
+            </span>
+          </button>
+        </div>
       )}
       <div className='relative flex mx-auto'>
-        <span className='pl-3 pr-12 mt-2 text-6xl italic tracking-widest uppercase pointer-events-none wishlist-title brightness-50'>
+        <span className='pl-1 pr-20 mt-2 text-6xl italic tracking-widest uppercase pointer-events-none wishlist-title brightness-50'>
           Wishlist
         </span>
-        <div className='flex flex-wrap gap-6'>
+        <div className='flex flex-wrap gap-6 pb-8'>
           {games.map(({ image, name, id }) => (
             <WishlistCard image={image} name={name} id={id} key={id} />
           ))}
