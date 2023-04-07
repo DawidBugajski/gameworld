@@ -7,6 +7,7 @@ import { dlcCarouselSettings } from 'utils/dlcCarouselSettings';
 
 const GameDLC = ({ dlc }) => {
   const settings = dlcCarouselSettings(dlc);
+  console.log(dlc.length);
 
   return (
     <div className='relative flex flex-col justify-between w-full py-20 text-white bg-fixed bg-center bg-cover bg-dlc shadow-left premiere'>

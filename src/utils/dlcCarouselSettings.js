@@ -1,7 +1,7 @@
-export const dlcCarouselSettings = (dlc) => {
+export const dlcCarouselSettings = (game) => {
   return {
     className: 'dlc__carousel',
-    slidesToShow: dlc.length >= 8 ? 8 : dlc.length,
+    slidesToShow: game.length >= 8 ? 8 : game.length,
     arrows: false,
     autoplay: true,
     swipeToSlide: true,
@@ -9,19 +9,19 @@ export const dlcCarouselSettings = (dlc) => {
       {
         breakpoint: 1700,
         settings: {
-          slidesToShow: dlc.length >= 6 ? 6 : dlc.length,
+          slidesToShow: game.length >= 6 ? 6 : game.length,
         },
       },
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: dlc.length >= 5 ? 5 : dlc.length,
+          slidesToShow: game.length >= 5 ? 5 : game.length,
         },
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: dlc.length >= 4 ? 4 : dlc.length,
+          slidesToShow: game.length >= 4 ? 4 : game.length,
         },
       },
       {
@@ -35,7 +35,7 @@ export const dlcCarouselSettings = (dlc) => {
         breakpoint: 500,
         settings: {
           autoplay: false,
-          slidesToShow: 2,
+          slidesToShow: game.length === 1 ? 1 : 2,
         },
       },
     ],
