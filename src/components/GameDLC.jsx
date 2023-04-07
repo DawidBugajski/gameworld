@@ -7,11 +7,10 @@ import { dlcCarouselSettings } from 'utils/dlcCarouselSettings';
 
 const GameDLC = ({ dlc }) => {
   const settings = dlcCarouselSettings(dlc);
-  console.log(dlc.length);
 
   return (
     <div className='relative flex flex-col justify-between w-full py-20 text-white bg-fixed bg-center bg-cover bg-dlc shadow-left premiere'>
-      <h2 className='relative mx-auto text-2xl italic text-center uppercase w-fit lg:px-0 2xl:text-4xl fancy-undeline'>
+      <h2 className='relative mx-auto text-xl italic text-center uppercase md:text-2xl w-fit lg:px-0 2xl:text-4xl fancy-undeline'>
         Expand your experience...
       </h2>
       <div className='relative flex justify-center w-full gap-5 px-4 py-12 mx-auto sm:mx-0'>
