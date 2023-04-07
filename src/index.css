@@ -93,10 +93,16 @@ body {
 .dlc__carousel .slick-track {
   display: flex;
 }
+
+.borderClearing {
+  border: 1px solid rgb(21 128 61) !important;
+}
+
 .wishlist-title {
   writing-mode: vertical-lr;
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: vertical-lr;
+  position: relative;
 }
 .wishlist-title::after {
   content: '';
@@ -105,10 +111,6 @@ body {
   height: 50%;
   margin: 0 auto;
   background-image: linear-gradient(120deg, #dc1414, #781010 100%);
-}
-
-.borderClearing {
-  border: 1px solid rgb(21 128 61) !important;
 }
 
 @media (min-width: 640px) {

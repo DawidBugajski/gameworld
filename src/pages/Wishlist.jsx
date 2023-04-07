@@ -18,7 +18,7 @@ const Wishlist = () => {
         鬼滅の刃 刀鍛冶の里編 ᕦ(⋋‿☄)ᕗ
       </span>
       {games.length >= 1 && (
-        <div className='relative grid py-4 place-content-center'>
+        <div className='relative grid py-4 mt-14 place-content-center sm:mt-0'>
           <button
             onClick={handleShowWarningPopup}
             className='relative inline-flex items-center px-3 py-2 mx-auto text-sm tracking-wide text-center text-white transition-all duration-150 rounded-lg bg-main-dark-red hover:shadow-lg hover:bg-main-gray group'
@@ -45,10 +45,10 @@ const Wishlist = () => {
         </div>
       )}
       <div className='relative flex mx-auto'>
-        <span className='pl-1 pr-20 mt-2 text-6xl italic tracking-widest uppercase pointer-events-none wishlist-title brightness-50'>
+        <span className='hidden sm:block sm:mr-8 md:mr-12 text-4xl xl:text-6xl lg:mr-2 pl-1 xl:mr-8 2xl:mr-14 min-[1800px]:mr-20 mt-2 italic tracking-widest uppercase pointer-events-none wishlist-title brightness-50'>
           Wishlist
         </span>
-        <div className='flex flex-wrap gap-6 pb-8'>
+        <div className='flex flex-wrap gap-0 pb-8 sm:gap-6'>
           {games.map(({ image, name, id }) => (
             <WishlistCard image={image} name={name} id={id} key={id} />
           ))}

@@ -11,7 +11,7 @@ const WishlistCard = ({ image, name, id }) => {
   return (
     <div
       key={id}
-      className='relative transition-all duration-150 rounded-lg shadow-xl cursor-pointer w-52 wish-card h-72 group hover:shadow-cyan-800 hover:shadow-2xl hover:scale-95'
+      className='p-2 sm:p-0 w-1/2 h-60 sm:h-60 sm:w-40 md:w-48 relative transition-all duration-150 rounded-lg shadow-xl cursor-pointer min-[1800px]:w-52 wish-card md:h-72 group hover:shadow-cyan-800 hover:shadow-2xl hover:scale-95'
     >
       <FaTrash
         onClick={() => handleDeleteGame({ image, name, id })}
