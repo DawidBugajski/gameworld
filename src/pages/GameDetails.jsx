@@ -15,6 +15,7 @@ import Gallery from 'components/Gallery';
 import GameDLC from 'components/GameDLC';
 import GameSeries from 'components/GameSeries';
 import LoadingDots from 'components/LoadingDots';
+import ErrorFetchingData from 'components/ErrorFetchingData';
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -34,7 +35,9 @@ const GameDetails = () => {
       {
         queryKey: ['gameDetails', id],
         queryFn: () =>
-          axios.get(`${BASE_URL}/${id}?key=${API_KEY}`).then((res) => res.data),
+          axios
+            .get(`${BASE_URL}/${id}?key=${API_KEY}jj`)
+            .then((res) => res.data),
       },
       {
         queryKey: ['gameScreenshots', id],
@@ -47,14 +50,14 @@ const GameDetails = () => {
 
   if (gameDetailsQuery.isLoading) {
     return (
-      <div className='bg-[#151515] min-h-screen shadow-left relative flex items-center justify-center'>
+      <div className=''>
         <LoadingDots />
       </div>
     );
   }
 
-  if (gameSeriesQuery.isError) {
-    return <div>Error: {gameDetailsQuery.error.message}</div>;
+  if (gameDetailsQuery.isError) {
+    return <ErrorFetchingData message={gameDetailsQuery.error.message} />;
   }
 
   const gameDetails = gameDetailsQuery.data;
@@ -110,6 +113,7 @@ const GameDetails = () => {
             <GameTags tags={tags} />
           </div>
         </div>
+        <ErrorFetchingData />
       </div>
       <PageBackgroundImage image={image} />
       {gameDLC && gameDLC.length !== 0 && <GameDLC dlc={gameDLC} />}
