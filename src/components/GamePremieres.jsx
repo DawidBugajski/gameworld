@@ -3,7 +3,7 @@ import axios from 'axios';
 import { PREMIERE_GAMES_URL } from 'utils/constans';
 import { useQuery } from '@tanstack/react-query';
 import SkeletonPremiereGames from './SkeletonPremiereGames';
-import ErrorFetchingData from './ErrorFetchingData';
+import ErrorFetchingData from './Error';
 import GamePremiereCard from './GamePremiereCard';
 import PremiereHeader from './PremiereHeader';
 

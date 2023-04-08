@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { API_KEY, BASE_URL } from 'utils/constans';
 import Carousel from './Carousel';
 import SkeletonTopGames from './SkeletonTopGames';
-import ErrorFetchingData from './ErrorFetchingData';
+import ErrorFetchingData from './Error';
 
 const TopGames = () => {
   const { isLoading, error, data } = useQuery({

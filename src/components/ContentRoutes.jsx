@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from 'pages/HomePage';
 import Wishlist from 'pages/Wishlist';
 import GameDetails from 'pages/GameDetails';
+import Error from './Error';
 
 const ContentRoutes = () => {
   return (
@@ -10,6 +11,7 @@ const ContentRoutes = () => {
       <Route path='/' element={<HomePage />} />
       <Route path='/wishlist' element={<Wishlist />} />
       <Route path='/games/:id' element={<GameDetails />} />
+      <Route path='*' element={<Error />} />
     </Routes>
   );
 };
