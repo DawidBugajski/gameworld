@@ -17,6 +17,15 @@ module.exports = {
         'main-dark-red': '#781010',
         'main-gray': '#0a0a0a',
       },
+      keyframes: {
+        gototop: {
+          '50%': { transform: 'rotate(5deg)' },
+          '100%': { transform: 'rotate(-5deg)' },
+        },
+      },
+      animation: {
+        gototop: 'gototop 0.5s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
