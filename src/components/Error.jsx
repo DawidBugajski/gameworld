@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Error = ({ message }) => {
   return (
-    <div className='min-h-screen w-full flex-col error-container flex justify-center bg-[#151515] relative items-center gap-8'>
+    <div className='min-h-screen flex-col error-container flex justify-center bg-[#151515] items-center gap-8'>
       <h1 className='text-8xl font-extrabold text-transparent lg:animate-bounce 2xl:text-[200px] bg-clip-text bg-gradient-to-r from-main-red to-main-dark-red'>
         Oops !
       </h1>
