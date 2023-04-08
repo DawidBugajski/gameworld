@@ -1,16 +1,17 @@
 TODO:
-- remember of handling error components
-- url with gamename not with id
-- http://localhost:3000/games/ - nic nie mam wtedy xD - po prostu dodać do routingu wtedy 404 ktore ma przekierować na homepage?
-- opakować requesty w jeden
-- po kliknięciu w cokolwiek jak jest refresh strony, niech przenosi do góry przeglądarki
-- go to top?
-https://medium.com/@rukeeojigbo/git-basics-an-idiots-guide-99445a56bd65
 
-http://localhost:3000/games/13535 - bug on xs with dlc
+OVERALL
+- handle error&loading components [💥] 
+- url with gamename not with id [💥] 
+- http://localhost:3000/games/ - nic nie mam wtedy xD - po prostu dodać do routingu wtedy 404 ktore ma przekierować na homepage? [💥] 
+- opakować requesty w jeden [💥] 
+- po kliknięciu w cokolwiek jak jest refresh strony, niech przenosi do góry przeglądarki [💥] 
+- na mobile po kliknięciu w wishlist niech wylacza menu [💥] 
+- go to top? [💥] 
 
-
-//WISHLIST
+WISHLIST
 max 100 games or comunicate, buy premium
 filtering games by ?
 you dont know what buy first? let's roll (add spin animate and after 2sec throw popup with losed game)
+
+https://medium.com/@rukeeojigbo/git-basics-an-idiots-guide-99445a56bd65

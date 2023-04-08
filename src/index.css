@@ -27,7 +27,7 @@ body {
   position: absolute;
 }
 
-/* CAROUSEL HOMEPAGE */
+/* CAROUSELS  */
 .carousel__card {
   width: 95% !important;
   height: 280px;
@@ -36,7 +36,6 @@ body {
 }
 .dlc__card {
   height: 280px;
-  /* width: 200px !important; */
   padding: 0 5px;
 }
 
@@ -94,6 +93,8 @@ body {
   display: flex;
 }
 
+/* WISHLIST PAGE */
+
 .borderClearing {
   border: 1px solid rgb(21 128 61) !important;
 }
@@ -112,6 +113,34 @@ body {
   margin: 0 auto;
   background-image: linear-gradient(120deg, #dc1414, #781010 100%);
 }
+
+/* DOTS LOADER */
+
+.bouncing-loader > div {
+  width: 50px;
+  height: 50px;
+  margin: 3px 6px;
+  border-radius: 50%;
+  background-image: linear-gradient(120deg, #dc1414, #781010 100%);
+  opacity: 1;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translateY(-16px);
+  }
+}
+
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* RWD */
 
 @media (min-width: 640px) {
   .fancy-undeline {

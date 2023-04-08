@@ -14,6 +14,7 @@ import GameTags from 'components/GameTags';
 import Gallery from 'components/Gallery';
 import GameDLC from 'components/GameDLC';
 import GameSeries from 'components/GameSeries';
+import LoadingDots from 'components/LoadingDots';
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -45,10 +46,14 @@ const GameDetails = () => {
   });
 
   if (gameDetailsQuery.isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className='bg-[#151515] min-h-screen shadow-left relative flex items-center justify-center'>
+        <LoadingDots />
+      </div>
+    );
   }
 
-  if (gameDetailsQuery.isError) {
+  if (gameSeriesQuery.isError) {
     return <div>Error: {gameDetailsQuery.error.message}</div>;
   }
 
