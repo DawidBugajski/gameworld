@@ -1,10 +1,3 @@
-TODO:
-
-- na mobile po kliknięciu w wishlist niech wylacza menu [💥] 
-
 WISHLIST
-max 100 games or comunicate, buy premium
-filtering games by ?
-you dont know what buy first? let's roll (add spin animate and after 2sec throw popup with losed game)
-
+- you dont know what buy first? let's roll (add spin animate and after 2sec throw popup with losed game)
 https://medium.com/@rukeeojigbo/git-basics-an-idiots-guide-99445a56bd65
