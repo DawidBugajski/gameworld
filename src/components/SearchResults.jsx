@@ -1,16 +1,21 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import { API_KEY, BASE_URL } from 'utils/constans';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
+import { setToggleMenu } from 'store/slices/toggleMenuSlice';
+import useWindowWidth from 'hooks/useWindowWidth';
 
 const SearchResults = () => {
+  const dispatch = useDispatch();
+  const { width } = useWindowWidth();
   const { showResults, value } = useSelector((state) => state.search);
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
   const containerClass = `lg:mt-0 mt-2 text-white  list-none w-full text-left rounded-lg  ${
     showResults && isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
   }`;
+  const handleCloseOpenMenu = () => width < 640 && dispatch(setToggleMenu());
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['searchValue', value],
@@ -31,7 +36,7 @@ const SearchResults = () => {
         <Link
           key={game.id}
           to={`/games/${game.id}`}
-          onClick={() => console.log(game)}
+          onClick={handleCloseOpenMenu}
         >
           <li
             className=' hover:bg-opacity-50 transition-all duration-150 cursor-pointer p-[5px] my-2 lg:p-3 rounded-lg bg-neutral-900'

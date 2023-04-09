@@ -1,13 +1,18 @@
 import React from 'react';
 import { AiFillHeart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setToggleMenu } from 'store/slices/toggleMenuSlice';
+import useWindowWidth from 'hooks/useWindowWidth';
 
 const WishlistIcon = () => {
+  const dispatch = useDispatch();
   const { isMenuOpen } = useSelector((state) => state.toggleMenu);
+  const { width } = useWindowWidth();
+  const handleCloseOpenMenu = () => width < 640 && dispatch(setToggleMenu());
 
   return (
-    <Link to='/wishlist'>
+    <Link onClick={handleCloseOpenMenu} to='/wishlist'>
       <div className='group cursor-pointer transition-all duration-300 grid grid-cols-[50px_1fr] w-full place-content-start'>
         <div
           className={`${

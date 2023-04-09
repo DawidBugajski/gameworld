@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from 'pages/HomePage';
 import Wishlist from 'pages/Wishlist';
 import GameDetails from 'pages/GameDetails';
-import Error from './Error';
+import Error from '../components/Error';
 
 const ContentRoutes = () => {
   return (

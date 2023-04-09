@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Footer from 'components/Footer';
-import ContentRoutes from 'components/ContentRoutes';
+import ContentRoutes from 'routes/ContentRoutes';
 import Sidebar from 'components/Sidebar';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';

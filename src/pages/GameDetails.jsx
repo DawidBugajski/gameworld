@@ -46,13 +46,7 @@ const GameDetails = () => {
     ],
   });
 
-  if (gameDetailsQuery.isLoading) {
-    return (
-      <div className=''>
-        <LoadingDots />
-      </div>
-    );
-  }
+  if (gameDetailsQuery.isLoading) return <LoadingDots />;
 
   if (gameDetailsQuery.isError) {
     return <Error message={gameDetailsQuery.error.message} />;
