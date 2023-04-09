@@ -40,7 +40,7 @@ const WishlistButton = ({ name, image, id }) => {
         </svg>
       </button>
       {showTooltip && (
-        <span className='absolute px-3 py-2 text-sm text-center text-white -translate-x-1/2 bg-black rounded-lg roudned-lg top-12 whitespace-nowrap left-1/2 before:block before:h-3 before:w-3 before:rotate-45 before:absolute before:-top-1 before:left-1/2 before:transform before:-translate-x-1/2 before:bg-black'>
+        <span className='absolute px-3 py-2 text-sm text-center text-white -translate-x-1/2 rounded-lg bg-main-gray roudned-lg top-12 whitespace-nowrap left-1/2 before:block before:h-3 before:w-3 before:rotate-45 before:absolute before:-top-1 before:left-1/2 before:transform before:-translate-x-1/2 before:bg-main-gray'>
           Added to wishlist!
         </span>
       )}

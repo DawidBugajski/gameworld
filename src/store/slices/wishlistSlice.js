@@ -5,6 +5,7 @@ const wishlistSlice = createSlice({
   initialState: {
     games: JSON.parse(localStorage.getItem('wishlistItems')) || [],
     isClearPopupWarningVisible: false,
+    randomGame: null,
   },
   reducers: {
     setAddToWishlist: (state, action) => {
@@ -37,6 +38,10 @@ const wishlistSlice = createSlice({
     setHideClearPopupWarning: (state) => {
       state.isClearPopupWarningVisible = false;
     },
+    setRandomgame: (state, action) => {
+      state.randomGame = action.payload;
+      console.log(state.randomGame);
+    },
   },
 });
 
@@ -46,5 +51,6 @@ export const {
   setClearWishlist,
   setHideClearPopupWarning,
   setShowClearPopupWarning,
+  setRandomgame,
 } = wishlistSlice.actions;
 export default wishlistSlice.reducer;

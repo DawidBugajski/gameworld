@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setShowClearPopupWarning } from 'store/slices/wishlistSlice';
 import WishlistCard from 'components/WishlistCard';
 import WarningPopup from 'components/WarningPopup';
+import GetRandomGameButton from 'components/GetRandomGameButton';
 
 const Wishlist = () => {
   const { games, isClearPopupWarningVisible } = useSelector(
@@ -18,10 +19,10 @@ const Wishlist = () => {
         鬼滅の刃 刀鍛冶の里編 ᕦ(⋋‿☄)ᕗ
       </span>
       {games.length >= 1 && (
-        <div className='relative grid py-4 mt-14 place-content-center sm:mt-0'>
+        <div className='relative flex items-center justify-center gap-8 py-4 mt-14 sm:mt-0'>
           <button
             onClick={handleShowWarningPopup}
-            className='relative inline-flex items-center px-3 py-2 mx-auto text-sm tracking-wide text-center text-white transition-all duration-150 rounded-lg bg-main-dark-red hover:shadow-lg hover:bg-main-gray group'
+            className='relative inline-flex items-center px-3 py-2 text-sm tracking-wide text-center text-white transition-all duration-150 rounded-lg bg-main-dark-red hover:shadow-lg hover:bg-main-gray group'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -42,6 +43,7 @@ const Wishlist = () => {
               {games.length}
             </span>
           </button>
+          <GetRandomGameButton />
         </div>
       )}
       <div className='relative flex mx-auto'>
@@ -60,8 +62,3 @@ const Wishlist = () => {
 };
 
 export default Wishlist;
-
-// max 100 games or comunicate, buy premium and fuck off
-// show counter how many left games you can add ?
-// filtering games by ?
-// you dont know what buy first? let's roll (add spin animate and after 2sec throw popup with losed game)

@@ -2,16 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaTrash } from 'react-icons/fa';
 import { setRemoveFromWishlist } from 'store/slices/wishlistSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const WishlistCard = ({ image, name, id }) => {
   const dispatch = useDispatch();
+  const { randomGame } = useSelector((state) => state.wishlist);
+  const randomGameId = randomGame?.id;
+
   const handleDeleteGame = (game) => dispatch(setRemoveFromWishlist(game));
 
   return (
     <div
       key={id}
-      className='p-2 sm:p-0 w-1/2 h-60 sm:h-60 sm:w-40 md:w-48 relative transition-all duration-150 rounded-lg sm:shadow-xl cursor-pointer min-[1800px]:w-52 wish-card md:h-72 group sm:hover:shadow-cyan-800 sm:hover:shadow-2xl hover:scale-95'
+      className={`p-2 sm:p-0 w-1/2 h-60 sm:h-60 sm:w-40 md:w-48 relative transition-all duration-150 rounded-lg sm:shadow-xl cursor-pointer min-[1800px]:w-52 wish-card md:h-72 group sm:hover:shadow-cyan-800 sm:hover:shadow-2xl hover:scale-95 ${
+        randomGameId === id && 'border-2 border-main-red'
+      }`}
     >
       <FaTrash
         onClick={() => handleDeleteGame({ image, name, id })}
@@ -36,4 +41,3 @@ const WishlistCard = ({ image, name, id }) => {
 };
 
 export default WishlistCard;
-//w-56 h-72
