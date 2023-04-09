@@ -18,7 +18,7 @@ const WarningPopup = () => {
   const handleHideWarningPopup = () => dispatch(setHideClearPopupWarning());
 
   return (
-    <div className='fixed inset-0 z-50 flex items-center justify-center '>
+    <div className='fixed inset-0 z-50 flex items-center justify-center px-6 text-center sm:p-0'>
       <div className='absolute inset-0 bg-black opacity-75'></div>
       <div className='relative z-10 p-1 rounded-lg bg-gradient-to-br from-main-red via-purple-600 to-main-dark-red'>
         <div className='flex flex-col gap-6 p-8 font-mono text-lg text-white bg-black'>

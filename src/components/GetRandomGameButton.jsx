@@ -1,24 +1,27 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaDiceD20 } from 'react-icons/fa';
-import { setRandomgame } from 'store/slices/wishlistSlice';
+import { setRandomGame } from 'store/slices/wishlistSlice';
+import { useNavigate } from 'react-router-dom';
 
 const GetRandomGameButton = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { games } = useSelector((state) => state.wishlist);
   const [isHover, setIsHover] = useState(false);
 
   const handleGetRandomGame = () => {
     const getRandomIndex = Math.floor(Math.random() * games.length);
-    const setRandomGame = games[getRandomIndex];
-    dispatch(setRandomgame(setRandomGame));
+    const getRandomGame = games[getRandomIndex];
+    dispatch(setRandomGame(getRandomGame));
+    navigate(`/games/${getRandomGame.id}`);
   };
   return (
     <button
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       onClick={handleGetRandomGame}
-      className='relative p-2 transition-all duration-150 rounded-full outline-none bg-main-dark-red hover:shadow-lg hover:bg-main-gray group '
+      className='relative z-50 p-2 transition-all duration-150 rounded-full outline-none bg-main-dark-red hover:shadow-lg hover:bg-main-gray group '
     >
       <FaDiceD20 className='w-6 h-6 transition-all duration-150 group-hover:fill-main-dark-red group-hover:animate-spin' />
       {isHover && (

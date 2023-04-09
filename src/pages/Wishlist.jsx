@@ -22,7 +22,7 @@ const Wishlist = () => {
         <div className='relative flex items-center justify-center gap-8 py-4 mt-14 sm:mt-0'>
           <button
             onClick={handleShowWarningPopup}
-            className='relative inline-flex items-center px-3 py-2 text-sm tracking-wide text-center text-white transition-all duration-150 rounded-lg bg-main-dark-red hover:shadow-lg hover:bg-main-gray group'
+            className='relative z-50 inline-flex items-center px-3 py-2 text-sm tracking-wide text-center text-white transition-all duration-150 rounded-lg bg-main-dark-red hover:shadow-lg hover:bg-main-gray group'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
