@@ -1,16 +1,6 @@
 TODO:
 
-OVERALL
-- handle error&loading components:
-* Gamedetails [✅]
-* Gallery, DLC isLoading, if error you don't have to show anything, because it doesn't broke app? 
-
-- url with gamename not with id [💥] 
-- http://localhost:3000/games/ - nic nie mam wtedy xD - po prostu dodać do routingu wtedy 404 ktore ma przekierować na homepage? [💥] 
-- opakować requesty w jeden [💥] 
-- po kliknięciu w cokolwiek jak jest refresh strony, niech przenosi do góry przeglądarki [💥] 
 - na mobile po kliknięciu w wishlist niech wylacza menu [💥] 
-- go to top? [💥] 
 
 WISHLIST
 max 100 games or comunicate, buy premium
