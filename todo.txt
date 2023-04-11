@@ -1,0 +1,3 @@
+ALL Boxes, carousels(real) rework to make them link right away and on phones they are on such a "hover" right away
+- z-index on icons wishlist - test
+- go to top on mobile z - index

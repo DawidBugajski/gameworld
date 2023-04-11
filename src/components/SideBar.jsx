@@ -12,7 +12,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`fixed justify-start flex flex-col ${hideSidebar} w-full ${menuOverlay} transition-all duration-300  p-[25px] lg:text-center lg:gap-10 z-50 `}
+      className={`fixed justify-start flex flex-col ${hideSidebar} w-full ${menuOverlay} transition-all duration-300  p-[25px] lg:text-center lg:gap-10 z-[100]`}
     >
       <Header />
     </div>

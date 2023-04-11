@@ -28,7 +28,8 @@ body {
 }
 
 /* CAROUSELS  */
-.carousel__card {
+.carousel__card,
+.carousel__card--mobile {
   width: 95% !important;
   height: 280px;
   cursor: grab;
@@ -57,7 +58,8 @@ body {
 
 .carousel__card:focus,
 .carousel__card:active,
-.dlc__card:focus,
+.carousel__card--mobile:active,
+.carousel__card--mobile:focus .dlc__card:focus,
 .dlc__card:active .gallery_card:focus,
 .gallery_card.active {
   outline: none;
