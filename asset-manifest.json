@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/game-world/static/css/main.468cbe02.css",
+    "main.js": "/game-world/static/js/main.b2097615.js",
+    "static/media/home-premiere.jpg": "/game-world/static/media/home-premiere.de8b092ecaec41752e28.jpg",
+    "static/media/page-dlc.jpg": "/game-world/static/media/page-dlc.edf58cfcfd442cbe6435.jpg",
+    "static/media/page-series.jpg": "/game-world/static/media/page-series.5ae7dca8a2d5aa09ef17.jpg",
+    "static/media/home-background.jpg": "/game-world/static/media/home-background.b3a487aa4598414994ce.jpg",
+    "static/media/epic-games.svg": "/game-world/static/media/epic-games.1103316defe99bfe6b00aacf63cabf71.svg",
+    "static/media/linux.svg": "/game-world/static/media/linux.eb9083d74f143a6dfd42e030aab737a7.svg",
+    "static/media/slick.svg": "/game-world/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/game-world/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/game-world/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/itch.svg": "/game-world/static/media/itch.b67393f0c1d0b6a5ee0d404a25e3d0d0.svg",
+    "static/media/gog.svg": "/game-world/static/media/gog.58f44efdd80e9c887ba36f1fbbe4f0fe.svg",
+    "static/media/slick.woff": "/game-world/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/appstore.svg": "/game-world/static/media/appstore.f15a012e6930662979fbacd2d8e22daa.svg",
+    "static/media/web.svg": "/game-world/static/media/web.47b6bcb203f8dc8038ddb0d8b18caa53.svg",
+    "static/media/xbox_store.svg": "/game-world/static/media/xbox_store.881cfb9f43ef027c29a558c8543a8461.svg",
+    "static/media/android.svg": "/game-world/static/media/android.0dde448770bdbe98fe80e07aafe4ddfa.svg",
+    "static/media/steam.svg": "/game-world/static/media/steam.d64ae9614fceecbc3c61d8fd0bee9f5f.svg",
+    "static/media/ps_store.svg": "/game-world/static/media/ps_store.f1f6aa3c1c25fd961c71b6a15708a009.svg",
+    "static/media/xbox.svg": "/game-world/static/media/xbox.c56895bc40a7141b259142f35f4b7467.svg",
+    "static/media/sega.svg": "/game-world/static/media/sega.b2e0dd0802662f92dc8d98e445c0573a.svg",
+    "index.html": "/game-world/index.html",
+    "static/media/apple.svg": "/game-world/static/media/apple.da595f4fa6d1a1a08923f83d57fef9aa.svg",
+    "static/media/google-play.svg": "/game-world/static/media/google-play.2e217580b2e72f15974bd813b9adef60.svg",
+    "static/media/playstation.svg": "/game-world/static/media/playstation.ead2ba6dc6e416f24ab87042336c7567.svg",
+    "static/media/ios.svg": "/game-world/static/media/ios.2af59454316f0ce5ab05551bef1ab1bc.svg",
+    "static/media/atari.svg": "/game-world/static/media/atari.6659c6931ca8d0004741f290e4d5c2e3.svg",
+    "static/media/nintendo_store.svg": "/game-world/static/media/nintendo_store.e8eea001a1fa342c95483c5b6d16b658.svg",
+    "static/media/nintendo.svg": "/game-world/static/media/nintendo.2a3045eeab12807a9b9a7fe566d1d44f.svg",
+    "static/media/3do.svg": "/game-world/static/media/3do.2aab7b363c650936c1e98f9fb471e456.svg",
+    "static/media/commodore-amiga.svg": "/game-world/static/media/commodore-amiga.aebf18b30f66b57e0005eb9946de78e9.svg",
+    "static/media/pc.svg": "/game-world/static/media/pc.3243cf6215bd65d41c9d6d320208ae77.svg",
+    "main.468cbe02.css.map": "/game-world/static/css/main.468cbe02.css.map",
+    "main.b2097615.js.map": "/game-world/static/js/main.b2097615.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.468cbe02.css",
+    "static/js/main.b2097615.js"
+  ]
+}
