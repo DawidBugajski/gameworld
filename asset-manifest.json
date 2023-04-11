@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/game-world/static/css/main.468cbe02.css",
-    "main.js": "/game-world/static/js/main.b2097615.js",
+    "main.js": "/game-world/static/js/main.da152b90.js",
     "static/media/home-premiere.jpg": "/game-world/static/media/home-premiere.de8b092ecaec41752e28.jpg",
     "static/media/page-dlc.jpg": "/game-world/static/media/page-dlc.edf58cfcfd442cbe6435.jpg",
     "static/media/page-series.jpg": "/game-world/static/media/page-series.5ae7dca8a2d5aa09ef17.jpg",
@@ -34,10 +34,10 @@
     "static/media/commodore-amiga.svg": "/game-world/static/media/commodore-amiga.aebf18b30f66b57e0005eb9946de78e9.svg",
     "static/media/pc.svg": "/game-world/static/media/pc.3243cf6215bd65d41c9d6d320208ae77.svg",
     "main.468cbe02.css.map": "/game-world/static/css/main.468cbe02.css.map",
-    "main.b2097615.js.map": "/game-world/static/js/main.b2097615.js.map"
+    "main.da152b90.js.map": "/game-world/static/js/main.da152b90.js.map"
   },
   "entrypoints": [
     "static/css/main.468cbe02.css",
-    "static/js/main.b2097615.js"
+    "static/js/main.da152b90.js"
   ]
 }
