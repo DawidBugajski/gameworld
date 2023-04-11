@@ -8,9 +8,9 @@ import Error from '../components/Error';
 const ContentRoutes = () => {
   return (
     <Routes>
-      <Route path='/gameworld/' element={<HomePage />} />
-      <Route path='/gameworld/wishlist' element={<Wishlist />} />
-      <Route path='/gameworld/games/:id' element={<GameDetails />} />
+      <Route path='/' element={<HomePage />} />
+      <Route path='/wishlist' element={<Wishlist />} />
+      <Route path='/games/:id' element={<GameDetails />} />
       <Route path='*' element={<Error />} />
     </Routes>
   );
