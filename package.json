@@ -1,6 +1,6 @@
 {
-  "homepage": "http://DawidBugajski.github.io/game-world",
-  "name": "game-world",
+  "homepage": "http://DawidBugajski.github.io/gameworld",
+  "name": "gameworld",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
