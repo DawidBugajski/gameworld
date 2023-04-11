@@ -50,7 +50,7 @@ const Wishlist = () => {
         <span className='hidden sm:block sm:mr-8 md:mr-12 text-4xl xl:text-6xl lg:mr-2 pl-1 xl:mr-8 2xl:mr-14 min-[1800px]:mr-20 mt-2 italic tracking-widest uppercase pointer-events-none wishlist-title brightness-50'>
           Wishlist
         </span>
-        <div className='flex flex-wrap gap-0 pb-8 sm:gap-6'>
+        <div className='flex flex-wrap gap-0 px-2 pb-8 sm:gap-6 sm:px-0'>
           {games.map(({ image, name, id }) => (
             <WishlistCard image={image} name={name} id={id} key={id} />
           ))}
