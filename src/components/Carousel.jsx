@@ -7,10 +7,8 @@ import { carouselSettings } from 'utils/carouselSettings';
 import useWindowWidth from 'hooks/useWindowWidth';
 
 const Carousel = ({ data }) => {
-  const { width } = useWindowWidth();
-  const isMobile = width <= 640;
+  const { isMobile } = useWindowWidth();
 
-  // Two layouts, because on mobile Link needs to wrapp the entire card, and on desktop it needs to link only the link so that the user can drag the item in the carousel
   const desktopLayout = data.map(({ id, background_image: image, name }) => (
     <div className='carousel__card' key={id}>
       <img

@@ -35,7 +35,8 @@ body {
   cursor: grab;
   position: relative;
 }
-.dlc__card {
+.dlc__card,
+.dlc__card--mobile {
   height: 280px;
   padding: 0 5px;
 }
@@ -59,8 +60,12 @@ body {
 .carousel__card:focus,
 .carousel__card:active,
 .carousel__card--mobile:active,
-.carousel__card--mobile:focus .dlc__card:focus,
-.dlc__card:active .gallery_card:focus,
+.carousel__card--mobile:focus,
+.dlc__card--mobile:active,
+.dlc__card--mobile:focus,
+.dlc__card:focus,
+.dlc__card:active,
+.gallery_card:focus,
 .gallery_card.active {
   outline: none;
 }
