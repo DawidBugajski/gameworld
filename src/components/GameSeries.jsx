@@ -40,7 +40,3 @@ const GameSeries = ({ game }) => {
 };
 
 export default GameSeries;
-
-//https://www.react-spring.dev/docs/getting-started
-//placeholder photo if game doesn't have background image
-// co jeśli jest tylko 1 gra, bo teraz jest with 100 i to sie tak rozkurwia
