@@ -28,7 +28,7 @@ export const dlcCarouselSettings = (game) => {
         breakpoint: 640,
         settings: {
           autoplay: false,
-          slidesToShow: 3,
+          slidesToShow: game.length >= 3 ? 3 : game.length,
         },
       },
       {
