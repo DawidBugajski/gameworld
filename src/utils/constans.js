@@ -1,8 +1,10 @@
 import { getNextDay } from './helpers/getNextDay';
 
-export const API_KEY = '7efe092c929749abb1398edae2a86ee5';
-export const BASE_URL = 'https://api.rawg.io/api/games';
-export const PREMIERE_GAMES_URL = `${BASE_URL}?dates=${getNextDay()},2024-12-31&ordering=-rating&key=${API_KEY}&page_size=10`;
+export const API_KEY = process.env.REACT_APP_API_KEY;
+export const BASE_URL = process.env.REACT_APP_BASE_URL;
+
+const CURRENT_YEAR = new Date().getFullYear();
+export const PREMIERE_GAMES_URL = `${BASE_URL}?dates=${getNextDay()},${CURRENT_YEAR}-12-31&ordering=-rating&key=${API_KEY}&page_size=10`;
 
 // Svg
 export { ReactComponent as Playstation } from '../assets/svg/playstation.svg';
