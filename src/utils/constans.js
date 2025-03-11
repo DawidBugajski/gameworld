@@ -4,6 +4,7 @@ export const API_KEY = process.env.REACT_APP_API_KEY;
 export const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const CURRENT_YEAR = new Date().getFullYear();
+console.log(CURRENT_YEAR);
 export const PREMIERE_GAMES_URL = `${BASE_URL}?dates=${getNextDay()},${CURRENT_YEAR}-12-31&ordering=-rating&key=${API_KEY}&page_size=10`;
 
 // Svg
